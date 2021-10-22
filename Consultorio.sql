@@ -9,7 +9,7 @@ SegundoNombre varchar (50),
 PrimerApellido varchar (50),
 SegundoApellido varchar (50),
 FechaNacimiento date, 
-Cedula varchar (20)
+Cedula varchar (50)
 )
 
 create table Medico
