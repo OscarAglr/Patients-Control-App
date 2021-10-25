@@ -1,4 +1,5 @@
-﻿using HealtyALTF4.Designs.MedicamentosViews;
+﻿using HealtyALTF4.Designs.ConsultasViews;
+using HealtyALTF4.Designs.MedicamentosViews;
 using HealtyALTF4.Designs.MedicosViews;
 using HealtyALTF4.Designs.PacientesViews;
 using System;
@@ -41,6 +42,17 @@ namespace HealtyALTF4.Designs
         {
             FrmMedicamentosViews medicamentosViews = new FrmMedicamentosViews();
             medicamentosViews.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmConsultasViews consultasViews = new FrmConsultasViews();
+            consultasViews.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

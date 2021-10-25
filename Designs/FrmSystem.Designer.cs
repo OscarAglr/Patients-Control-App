@@ -101,6 +101,7 @@ namespace HealtyALTF4.Designs
             this.button5.TabIndex = 0;
             this.button5.Text = "Logout";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnMedicamentos
             // 
@@ -132,6 +133,7 @@ namespace HealtyALTF4.Designs
             this.button3.TabIndex = 3;
             this.button3.Text = "Query Control";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 

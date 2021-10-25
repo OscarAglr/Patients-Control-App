@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ConsultasController.cs" />
     <Compile Include="Controllers\IControllers.cs" />
     <Compile Include="Controllers\MedicamentosControllers.cs" />
     <Compile Include="Controllers\MedicosController.cs" />
     <Compile Include="Controllers\PacientesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Designs\ConsultasViews\FrmConsultasViews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmConsultasViews.Designer.cs">
+      <DependentUpon>FrmConsultasViews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Designs\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +89,7 @@
       <DependentUpon>FrmPacientesView.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Connection.cs" />
+    <Compile Include="Models\ConsultaModel.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\MedicamentosModel.cs" />
     <Compile Include="Models\MedicosModel.cs" />
@@ -89,6 +97,9 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Designs\ConsultasViews\FrmConsultasViews.resx">
+      <DependentUpon>FrmConsultasViews.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Designs\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

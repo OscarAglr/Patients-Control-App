@@ -21,3 +21,4 @@ C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Desig
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.PacientesViews.FrmPacientesView.resources
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicamentosViews.FrmMedicamentosViews.resources
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicosViews.FrmMedicosViews.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmConsultasViews.resources

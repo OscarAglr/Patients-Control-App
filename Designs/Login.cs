@@ -48,10 +48,5 @@ namespace HealtyALTF4
                 }
             }
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
