@@ -52,11 +52,11 @@
     <Compile Include="Controllers\MedicosController.cs" />
     <Compile Include="Controllers\PacientesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Designs\ConsultasViews\FrmConsultasViews.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Designs\ConsultasViews\ConsultasView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designs\ConsultasViews\FrmConsultasViews.Designer.cs">
-      <DependentUpon>FrmConsultasViews.cs</DependentUpon>
+    <Compile Include="Designs\ConsultasViews\ConsultasView.Designer.cs">
+      <DependentUpon>ConsultasView.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\Login.cs">
       <SubType>Form</SubType>
@@ -70,23 +70,29 @@
     <Compile Include="Designs\FrmSystem.Designer.cs">
       <DependentUpon>FrmSystem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\MedicamentosViews\FrmMedicamentosViews.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Designs\MedicamentosViews\MedicamentoView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designs\MedicamentosViews\FrmMedicamentosViews.Designer.cs">
-      <DependentUpon>FrmMedicamentosViews.cs</DependentUpon>
+    <Compile Include="Designs\MedicamentosViews\MedicamentoView.Designer.cs">
+      <DependentUpon>MedicamentoView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\MedicosViews\FrmMedicosViews.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Designs\MedicosViews\MedicosView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designs\MedicosViews\FrmMedicosViews.Designer.cs">
-      <DependentUpon>FrmMedicosViews.cs</DependentUpon>
+    <Compile Include="Designs\MedicosViews\MedicosView.Designer.cs">
+      <DependentUpon>MedicosView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\PacientesViews\FrmPacientesView.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Designs\PacientesViews\PacienteView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designs\PacientesViews\FrmPacientesView.Designer.cs">
-      <DependentUpon>FrmPacientesView.cs</DependentUpon>
+    <Compile Include="Designs\PacientesViews\PacienteView.Designer.cs">
+      <DependentUpon>PacienteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\UsersViews\UserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Designs\UsersViews\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\ConsultaModel.cs" />
@@ -97,8 +103,8 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Designs\ConsultasViews\FrmConsultasViews.resx">
-      <DependentUpon>FrmConsultasViews.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\ConsultasViews\ConsultasView.resx">
+      <DependentUpon>ConsultasView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -106,14 +112,17 @@
     <EmbeddedResource Include="Designs\FrmSystem.resx">
       <DependentUpon>FrmSystem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicamentosViews\FrmMedicamentosViews.resx">
-      <DependentUpon>FrmMedicamentosViews.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\MedicamentosViews\MedicamentoView.resx">
+      <DependentUpon>MedicamentoView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicosViews\FrmMedicosViews.resx">
-      <DependentUpon>FrmMedicosViews.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\MedicosViews\MedicosView.resx">
+      <DependentUpon>MedicosView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\PacientesViews\FrmPacientesView.resx">
-      <DependentUpon>FrmPacientesView.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\PacientesViews\PacienteView.resx">
+      <DependentUpon>PacienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\UsersViews\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -174,6 +183,23 @@
   <ItemGroup>
     <None Include="Resources\exit.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upgrade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programmer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace HealtyALTF4.Designs.MedicamentosViews
 {
-    public partial class FrmMedicamentosViews : Form
+    public partial class MedicamentoView : UserControl
     {
         static MedicamentosControllers controllers;
-        public FrmMedicamentosViews()
+        public MedicamentoView()
         {
             InitializeComponent();
         }
 
-        private void FrmMedicamentosViews_Load(object sender, EventArgs e)
+        private void PacienteView_Load(object sender, EventArgs e)
         {
             controllers = new MedicamentosControllers();
             dgvMedicamentos.DataSource = controllers.ShowTables();

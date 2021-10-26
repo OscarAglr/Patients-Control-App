@@ -9,20 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HealtyALTF4.Designs.PacientesViews
+namespace HealtyALTF4.Designs.MedicosViews
 {
-    public partial class FrmPacientesView : Form
+    public partial class MedicosView : UserControl
     {
-        static PacientesController pc;
-        public FrmPacientesView()
+        MedicosController controller;
+        public MedicosView()
         {
             InitializeComponent();
         }
 
-        private void FrmPacientesView_Load(object sender, EventArgs e)
+        private void PacienteView_Load(object sender, EventArgs e)
         {
-            pc = new PacientesController();
-            dgvPacientes.DataSource = pc.ShowTables();
+            controller = new MedicosController();
+            dgvMedicos.DataSource = controller.ShowTables();
         }
     }
 }

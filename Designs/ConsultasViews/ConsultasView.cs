@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace HealtyALTF4.Designs.ConsultasViews
 {
-    public partial class FrmConsultasViews : Form
+    public partial class ConsultasView : UserControl
     {
         ConsultasController consultasController;
-        public FrmConsultasViews()
+        public ConsultasView()
         {
             InitializeComponent();
         }
 
-        private void FrmConsultasViews_Load(object sender, EventArgs e)
+        private void PacienteView_Load(object sender, EventArgs e)
         {
             consultasController = new ConsultasController();
             dgvConsultas.DataSource = consultasController.ShowTables();

@@ -22,3 +22,34 @@ C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Desig
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicamentosViews.FrmMedicamentosViews.resources
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicosViews.FrmMedicosViews.resources
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmConsultasViews.resources
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\bin\Debug\HealtyALTF4.exe.config
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\bin\Debug\HealtyALTF4.exe
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\bin\Debug\HealtyALTF4.pdb
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.csproj.AssemblyReference.cache
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.Login.resources
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.FrmSystem.resources
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.Properties.Resources.resources
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.csproj.GenerateResource.cache
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.csproj.CoreCompileInputs.cache
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.exe
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.pdb
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.PacientesViews.PacienteView.resources
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.ConsultasViews.ConsultasView.resources
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.MedicamentosViews.MedicamentoView.resources
+C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.MedicosViews.MedicosView.resources
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\bin\Debug\HealtyALTF4.exe.config
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\bin\Debug\HealtyALTF4.exe
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\bin\Debug\HealtyALTF4.pdb
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.csprojAssemblyReference.cache
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.ConsultasViews.ConsultasView.resources
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Login.resources
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.FrmSystem.resources
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.MedicamentosViews.MedicamentoView.resources
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.MedicosViews.MedicosView.resources
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.PacientesViews.PacienteView.resources
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Properties.Resources.resources
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.csproj.GenerateResource.cache
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.csproj.CoreCompileInputs.cache
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.exe
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.pdb
+C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.UsersViews.UserView.resources

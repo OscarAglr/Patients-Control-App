@@ -28,31 +28,46 @@ namespace HealtyALTF4.Designs
 
         private void btnPacientes_Click(object sender, EventArgs e)
         {
-            FrmPacientesView pacientesView = new FrmPacientesView();
-            pacientesView.Show();
+            Designs.PacientesViews.PacienteView control = new PacienteView();
+            control.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(control);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmMedicosViews medicosViews = new FrmMedicosViews();
-            medicosViews.Show();
+            Designs.MedicosViews.MedicosView control = new MedicosView();
+            control.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(control);
         }
-
         private void btnMedicamentos_Click(object sender, EventArgs e)
         {
-            FrmMedicamentosViews medicamentosViews = new FrmMedicamentosViews();
-            medicamentosViews.Show();
+            Designs.MedicamentosViews.MedicamentoView control = new MedicamentoView();
+            control.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(control);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmConsultasViews consultasViews = new FrmConsultasViews();
-            consultasViews.Show();
+            Designs.ConsultasViews.ConsultasView control = new Designs.ConsultasViews.ConsultasView();
+            control.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(control);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Designs.UsersViews.UserView control = new UsersViews.UserView();
+            control.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(control);
         }
     }
 }

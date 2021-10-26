@@ -8,8 +8,37 @@ using System.Threading.Tasks;
 
 namespace HealtyALTF4.Models
 {
-    class UserModel
+    class UserModel : IModel
     {
+        public bool Create()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataTable ShowTables()
+        {
+            DataTable dt = new DataTable("Mostrar usuarios");
+            SqlConnection connect = new SqlConnection(Connection.cn);
+            connect.Open();
+            SqlCommand command = new SqlCommand("Exec MostrarUsuarios", connect);
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+            connect.Close();
+            adapter.Dispose();
+            return dt;
+        }
+
+        public int Update()
+        {
+            throw new NotImplementedException();
+        }
+
         public DataTable Validar_acceso(string usuario, string password)
         {
             DataTable DtResultado = new DataTable("Inicio_Sesión");
