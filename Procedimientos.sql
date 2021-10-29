@@ -27,10 +27,16 @@ Alter procedure MostrarMedicos
 as
 Select 
 NoMedico as [Numero de medico],
-PrimerNombre + ' ' + COALESCE(SegundoNombre, '') + ' ' + PrimerApellido + ' ' + COALESCE(SegundoApellido, '') as [Nombre del medico],
+PrimerNombre as [Primer nombre],
+COALESCE(SegundoNombre, '') as [Segundo nombre],
+PrimerApellido as [Primer apellido],
+COALESCE(SegundoApellido, '') as [Segundo Apellido],
 FechaNacimiento as [Fecha de nacimiento],
-Cedula as [Numero de cedula]
+Cedula as [Numero de cedula],
+COALESCE(especialidad,'') as Especialidad,
+estado as Estado
 from Medico
+
 
 Exec MostrarMedicos
 go

@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace HealtyALTF4.Models
 {
-    class UserModel : IModel
+    public class UserModel : IModel
     {
-        public bool Create()
+        public void Create()
         {
             throw new NotImplementedException();
         }
-
-        public bool Delete()
+        public bool ChangeState()
         {
             throw new NotImplementedException();
         }

@@ -9,9 +9,9 @@ namespace HealtyALTF4.Models
 {
     public interface IModel
     {
-        bool Create();
+        void Create();
         DataTable ShowTables();
         int Update();
-        bool Delete();
+        bool ChangeState();
     }
 }

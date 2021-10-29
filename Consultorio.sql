@@ -42,6 +42,9 @@ Nombre varchar(50),
 Componentes varchar (50)
 )
 
+alter table Medicamento
+alter column Componentes varchar(150)
+
 Create table DetalleConsulta(
 NoConsulta int, 
 NoMedicamento int, 

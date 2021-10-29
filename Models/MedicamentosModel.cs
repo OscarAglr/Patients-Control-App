@@ -8,16 +8,63 @@ using System.Threading.Tasks;
 
 namespace HealtyALTF4.Models
 {
-    class MedicamentosModel : IModel
+    public class MedicamentosModel : IModel
     {
-        public bool Create()
+        int id;
+        string nombre;
+        string componentes;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Componentes { get => componentes; set => componentes = value; }
+        public int Id { get => id; set => id = value; }
+
+        public void Create()
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlConnection connect = new SqlConnection(Connection.cn);
+
+                connect.Open();
+
+                SqlCommand command = new SqlCommand("exec AgregarMedicamento " +
+                    "@nombre, @componentes", connect);
+
+                command.Parameters.Add("nombre", SqlDbType.VarChar, 50).Value = Nombre;
+                command.Parameters.Add("componentes", SqlDbType.VarChar, 150).Value = Componentes;
+
+                command.ExecuteNonQuery();
+
+                connect.Close();
+                return;
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
-        public bool Delete()
+        public bool ChangeState()
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlConnection connect = new SqlConnection(Connection.cn);
+
+                connect.Open();
+
+                SqlCommand command = new SqlCommand("exec CambiarEstadoMedicamento " +
+                    "@id", connect);
+
+                command.Parameters.Add("id", SqlDbType.Int).Value = Id;
+
+                command.ExecuteNonQuery();
+
+                connect.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         public DataTable ShowTables()
@@ -36,7 +83,28 @@ namespace HealtyALTF4.Models
 
         public int Update()
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlConnection connect = new SqlConnection(Connection.cn);
+
+                connect.Open();
+
+                SqlCommand command = new SqlCommand("exec ActualizarMedicamento " +
+                    "@id, @nombre, @componentes", connect);
+
+                command.Parameters.Add("id", SqlDbType.Int).Value = Id;
+                command.Parameters.Add("nombre", SqlDbType.VarChar, 50).Value = Nombre;
+                command.Parameters.Add("componentes", SqlDbType.VarChar, 50).Value = Componentes;
+
+                command.ExecuteNonQuery();
+
+                connect.Close();
+                return Id;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
         }
     }
 }

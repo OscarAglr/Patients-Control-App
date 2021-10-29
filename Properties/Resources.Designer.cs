@@ -93,6 +93,26 @@ namespace HealtyALTF4.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enter {
+            get {
+                object obj = ResourceManager.GetObject("enter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enter_button {
+            get {
+                object obj = ResourceManager.GetObject("enter-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap escena_recepcion_hospital_dibujada_mano_52683_54825 {
             get {
                 object obj = ResourceManager.GetObject("escena-recepcion-hospital-dibujada-mano_52683-54825", resourceCulture);
@@ -196,6 +216,16 @@ namespace HealtyALTF4.Properties {
         internal static System.Drawing.Bitmap right_arrow {
             get {
                 object obj = ResourceManager.GetObject("right-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_arrow_button {
+            get {
+                object obj = ResourceManager.GetObject("right-arrow-button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

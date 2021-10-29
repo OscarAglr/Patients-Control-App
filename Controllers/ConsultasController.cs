@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace HealtyALTF4.Controllers
 {
-    class ConsultasController : IControllers
+    class ConsultasController : IControllers <ConsultaModel>
     {
         ConsultaModel model = new ConsultaModel();
-        public bool Create()
+        public bool Create(ConsultaModel c)
         {
             throw new NotImplementedException();
         }
 
-        public bool Delete()
+        public bool ChangeState(ConsultaModel c)
         {
             throw new NotImplementedException();
         }
@@ -26,7 +26,7 @@ namespace HealtyALTF4.Controllers
             return model.ShowTables();
         }
 
-        public int Update()
+        public int Update(ConsultaModel c)
         {
             throw new NotImplementedException();
         }

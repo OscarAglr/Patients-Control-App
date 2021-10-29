@@ -25,7 +25,7 @@ namespace HealtyALTF4
             dato = UserController.Validar_acceso(this.txtUser.Text, this.txtPassword.Text);
             if (dato == null)
             {
-                MessageBox.Show("No hay Conexión al Servidor", "Sistema de Control de Hospital", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se pudo conectar al Servidor", "Sistema de Control de Hospital", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
@@ -47,6 +47,11 @@ namespace HealtyALTF4
                     this.txtUser.Focus();
                 }
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtUser.Focus();
         }
     }
 }

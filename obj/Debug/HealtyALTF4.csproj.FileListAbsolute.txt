@@ -18,10 +18,6 @@ C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.cspro
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.exe
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.pdb
 C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.FrmSystem.resources
-C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.PacientesViews.FrmPacientesView.resources
-C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicamentosViews.FrmMedicamentosViews.resources
-C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicosViews.FrmMedicosViews.resources
-C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmConsultasViews.resources
 C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\bin\Debug\HealtyALTF4.exe.config
 C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\bin\Debug\HealtyALTF4.exe
 C:\Users\iGeorge\Documents\updateBD\Patients-Control-Demo\bin\Debug\HealtyALTF4.pdb
@@ -53,3 +49,14 @@ C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control
 C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.exe
 C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.pdb
 C:\Users\jaguilar\Documents\Semestre IV\Bases de datos\Proyecto\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.UsersViews.UserView.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.ConsultasViews.ConsultasView.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicamentosViews.MedicamentoView.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicosViews.MedicosView.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.PacientesViews.PacienteView.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.UsersViews.UserView.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.PacientesViews.FrmAddPaciente.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.PacientesViews.FrmUpdatePaciente.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicosViews.FrmAddMedico.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicosViews.FrmUpdateMedico.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicamentosViews.FrmAddMedicamento.resources
+C:\Users\jaguilar\Documents\Proyectos C#\HealtyALTF4\obj\Debug\HealtyALTF4.Designs.MedicamentosViews.FrmUpdateMedicamento.resources

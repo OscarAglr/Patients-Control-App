@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace HealtyALTF4.Controllers
 {
-    public interface IControllers
+    public interface IControllers <T>
     {
-        bool Create();
+        bool Create(T t);
         DataTable ShowTables();
-        int Update();
-        bool Delete();
+        int Update(T t);
+        bool ChangeState(T t);
     }
 }

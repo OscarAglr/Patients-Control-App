@@ -70,17 +70,53 @@
     <Compile Include="Designs\FrmSystem.Designer.cs">
       <DependentUpon>FrmSystem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Designs\MedicamentosViews\FrmAddMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\MedicamentosViews\FrmAddMedicamento.Designer.cs">
+      <DependentUpon>FrmAddMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\MedicamentosViews\FrmUpdateMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\MedicamentosViews\FrmUpdateMedicamento.Designer.cs">
+      <DependentUpon>FrmUpdateMedicamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Designs\MedicamentosViews\MedicamentoView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Designs\MedicamentosViews\MedicamentoView.Designer.cs">
       <DependentUpon>MedicamentoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Designs\MedicosViews\FrmAddMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\MedicosViews\FrmAddMedico.Designer.cs">
+      <DependentUpon>FrmAddMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\MedicosViews\FrmUpdateMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\MedicosViews\FrmUpdateMedico.Designer.cs">
+      <DependentUpon>FrmUpdateMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Designs\MedicosViews\MedicosView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Designs\MedicosViews\MedicosView.Designer.cs">
       <DependentUpon>MedicosView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\PacientesViews\FrmAddPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\PacientesViews\FrmAddPaciente.Designer.cs">
+      <DependentUpon>FrmAddPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\PacientesViews\FrmUpdatePaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\PacientesViews\FrmUpdatePaciente.Designer.cs">
+      <DependentUpon>FrmUpdatePaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\PacientesViews\PacienteView.cs">
       <SubType>UserControl</SubType>
@@ -112,11 +148,29 @@
     <EmbeddedResource Include="Designs\FrmSystem.resx">
       <DependentUpon>FrmSystem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Designs\MedicamentosViews\FrmAddMedicamento.resx">
+      <DependentUpon>FrmAddMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\MedicamentosViews\FrmUpdateMedicamento.resx">
+      <DependentUpon>FrmUpdateMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Designs\MedicamentosViews\MedicamentoView.resx">
       <DependentUpon>MedicamentoView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Designs\MedicosViews\FrmAddMedico.resx">
+      <DependentUpon>FrmAddMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\MedicosViews\FrmUpdateMedico.resx">
+      <DependentUpon>FrmUpdateMedico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Designs\MedicosViews\MedicosView.resx">
       <DependentUpon>MedicosView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\PacientesViews\FrmAddPaciente.resx">
+      <DependentUpon>FrmAddPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\PacientesViews\FrmUpdatePaciente.resx">
+      <DependentUpon>FrmUpdatePaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\PacientesViews\PacienteView.resx">
       <DependentUpon>PacienteView.cs</DependentUpon>
@@ -200,6 +254,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\programmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
