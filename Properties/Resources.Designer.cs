@@ -163,6 +163,16 @@ namespace HealtyALTF4.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hidden {
+            get {
+                object obj = ResourceManager.GetObject("hidden", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_973278536_170667a {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-973278536-170667a", resourceCulture);
@@ -246,6 +256,16 @@ namespace HealtyALTF4.Properties {
         internal static System.Drawing.Bitmap upgrade {
             get {
                 object obj = ResourceManager.GetObject("upgrade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visible {
+            get {
+                object obj = ResourceManager.GetObject("visible", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

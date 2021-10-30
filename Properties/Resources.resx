@@ -130,6 +130,9 @@
   <data name="sneeze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sneeze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hidden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hidden.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,6 +160,9 @@
   <data name="istockphoto-973278536-170667a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\istockphoto-973278536-170667a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="enter-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\enter-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="evaluating" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\evaluating.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,7 +178,7 @@
   <data name="escena-recepcion-hospital-dibujada-mano_52683-54825" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\escena-recepcion-hospital-dibujada-mano_52683-54825.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="enter-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\enter-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="visible" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\visible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

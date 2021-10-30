@@ -14,6 +14,7 @@ namespace HealtyALTF4
 {
     public partial class Login : Form
     {
+        int pivot = 1;
         public Login()
         {
             InitializeComponent();
@@ -52,6 +53,22 @@ namespace HealtyALTF4
         private void Login_Load(object sender, EventArgs e)
         {
             txtUser.Focus();
+        }
+
+        private void btnHideView_Click(object sender, EventArgs e)
+        {
+            if (pivot == 1)
+            {
+                pivot = 0;
+                btnHideView.Image = HealtyALTF4.Properties.Resources.visible;
+                txtPassword.PasswordChar = '\0';
+            }
+            else if (pivot == 0)
+            {
+                pivot = 1;
+                btnHideView.Image = HealtyALTF4.Properties.Resources.hidden;
+                txtPassword.PasswordChar = '*';
+            }
         }
     }
 }

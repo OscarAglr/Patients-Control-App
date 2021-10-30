@@ -264,5 +264,11 @@
   <ItemGroup>
     <None Include="Resources\enter-button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
