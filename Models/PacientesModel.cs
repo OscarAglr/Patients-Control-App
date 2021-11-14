@@ -129,5 +129,19 @@ namespace HealtyALTF4.Models
                 return false;
             }
         }
+
+        public DataTable Search(string dato)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connect = new SqlConnection(Connection.cn);
+            connect.Open();
+            SqlCommand command = new SqlCommand("Exec BusquedaPacientes @Buscar", connect);
+            command.Parameters.Add("Buscar", SqlDbType.VarChar, 100).Value = dato;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+            connect.Close();
+            adapter.Dispose();
+            return dt;
+        }
     }
 }

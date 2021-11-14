@@ -1,5 +1,6 @@
 ﻿using HealtyALTF4.Controllers;
 using HealtyALTF4.Designs;
+using HealtyALTF4.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,10 +36,15 @@ namespace HealtyALTF4
 
                 if (dato.Rows[0][0].ToString() == "Acceso Exitoso")
                 {
+                    UserModel user = new UserModel();
+                    user.Nombre = txtUser.Text;
                     MessageBox.Show("Bienvenido al Sistema", "Sistema de Control de Hospital", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FrmSystem system = new FrmSystem();
+                    FrmSystem system = new FrmSystem(this, user);
                     system.Show();
                     this.Hide();
+                    this.txtPassword.Text = "";
+                    this.txtUser.Text = "";
+                    this.txtUser.Focus();
                 }
                 else
                 {
@@ -52,6 +58,8 @@ namespace HealtyALTF4
 
         private void Login_Load(object sender, EventArgs e)
         {
+            this.Opacity = 0.0;
+            timer1.Start();
             txtUser.Focus();
         }
 
@@ -68,6 +76,17 @@ namespace HealtyALTF4
                 pivot = 1;
                 btnHideView.Image = HealtyALTF4.Properties.Resources.hidden;
                 txtPassword.PasswordChar = '*';
+            }
+        }
+
+        int cont = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity < 1) this.Opacity += 0.05;
+            cont += 1;
+            if (cont == 100)
+            {
+                timer1.Stop();
             }
         }
     }

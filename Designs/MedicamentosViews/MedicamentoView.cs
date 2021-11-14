@@ -69,5 +69,10 @@ namespace HealtyALTF4.Designs.MedicamentosViews
             frmUpdateMedicamento.mv = this;
             frmUpdateMedicamento.ShowDialog();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dgvMedicamentos.DataSource = controllers.Search(textBox1.Text);
+        }
     }
 }

@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,6 +73,12 @@
     <Compile Include="Designs\ConsultasViews\ConsultasView.Designer.cs">
       <DependentUpon>ConsultasView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmAddConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmAddConsulta.Designer.cs">
+      <DependentUpon>FrmAddConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Designs\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,17 +109,17 @@
     <Compile Include="Designs\MedicamentosViews\MedicamentoView.Designer.cs">
       <DependentUpon>MedicamentoView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\MedicosViews\FrmAddMedico.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Designs\MedicosViews\UpdateMedico.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designs\MedicosViews\FrmAddMedico.Designer.cs">
-      <DependentUpon>FrmAddMedico.cs</DependentUpon>
+    <Compile Include="Designs\MedicosViews\UpdateMedico.Designer.cs">
+      <DependentUpon>UpdateMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\MedicosViews\FrmUpdateMedico.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Designs\MedicosViews\AddMedico.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designs\MedicosViews\FrmUpdateMedico.Designer.cs">
-      <DependentUpon>FrmUpdateMedico.cs</DependentUpon>
+    <Compile Include="Designs\MedicosViews\AddMedico.Designer.cs">
+      <DependentUpon>AddMedico.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\MedicosViews\MedicosView.cs">
       <SubType>UserControl</SubType>
@@ -106,17 +127,17 @@
     <Compile Include="Designs\MedicosViews\MedicosView.Designer.cs">
       <DependentUpon>MedicosView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\PacientesViews\FrmAddPaciente.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Designs\PacientesViews\UpdatePaciente .cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designs\PacientesViews\FrmAddPaciente.Designer.cs">
-      <DependentUpon>FrmAddPaciente.cs</DependentUpon>
+    <Compile Include="Designs\PacientesViews\UpdatePaciente .Designer.cs">
+      <DependentUpon>UpdatePaciente .cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\PacientesViews\FrmUpdatePaciente.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Designs\PacientesViews\AddPaciente.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designs\PacientesViews\FrmUpdatePaciente.Designer.cs">
-      <DependentUpon>FrmUpdatePaciente.cs</DependentUpon>
+    <Compile Include="Designs\PacientesViews\AddPaciente.Designer.cs">
+      <DependentUpon>AddPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\PacientesViews\PacienteView.cs">
       <SubType>UserControl</SubType>
@@ -157,20 +178,20 @@
     <EmbeddedResource Include="Designs\MedicamentosViews\MedicamentoView.resx">
       <DependentUpon>MedicamentoView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicosViews\FrmAddMedico.resx">
-      <DependentUpon>FrmAddMedico.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\MedicosViews\UpdateMedico.resx">
+      <DependentUpon>UpdateMedico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicosViews\FrmUpdateMedico.resx">
-      <DependentUpon>FrmUpdateMedico.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\MedicosViews\AddMedico.resx">
+      <DependentUpon>AddMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\MedicosViews\MedicosView.resx">
       <DependentUpon>MedicosView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\PacientesViews\FrmAddPaciente.resx">
-      <DependentUpon>FrmAddPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\PacientesViews\UpdatePaciente .resx">
+      <DependentUpon>UpdatePaciente .cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\PacientesViews\FrmUpdatePaciente.resx">
-      <DependentUpon>FrmUpdatePaciente.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\PacientesViews\AddPaciente.resx">
+      <DependentUpon>AddPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\PacientesViews\PacienteView.resx">
       <DependentUpon>PacienteView.cs</DependentUpon>
@@ -269,6 +290,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\visible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallhaven-mdd63k_2560x1440.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallhaven-5w3zk5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carpeta-medica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historial-medico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historial-medico %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mascarilla-medica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallhaven-n6or7q.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simbolo-medico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corazon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\latido-del-corazon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\986f2d105786075.5f85fb1d2dd2f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageonline-co-whitebackgroundremoved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageonline-co-whitebackgroundremoved %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallhaven-dgy7r3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\samurai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\samurai %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1829940.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\virus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

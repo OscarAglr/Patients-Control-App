@@ -12,12 +12,17 @@ using System.Windows.Forms;
 
 namespace HealtyALTF4.Designs.PacientesViews
 {
+
     public partial class PacienteView : UserControl
     {
         static PacientesController pc = new PacientesController();
-        public PacienteView()
+        // Instancia del panel control
+        Panel panelControl;
+        // Se le pone como parámetro al constructor de la clase
+        public PacienteView(Panel panelControl)
         {
             InitializeComponent();
+            this.panelControl = panelControl;
         }
 
         private void PacienteView_Load(object sender, EventArgs e)
@@ -27,9 +32,13 @@ namespace HealtyALTF4.Designs.PacientesViews
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FrmAddPaciente frmAddPaciente = new FrmAddPaciente();
-            frmAddPaciente.pv = this;
-            frmAddPaciente.ShowDialog();
+            this.Hide();
+         
+            Designs.PacientesViews.AddPaciente addpac = new AddPaciente();
+            addpac.Dock = DockStyle.Fill;
+            panelControl.Controls.Clear();
+            panelControl.Controls.Add(addpac);
+           
         }
 
         public void MostrarTablas()
@@ -50,10 +59,15 @@ namespace HealtyALTF4.Designs.PacientesViews
                 Fecha_nac = Convert.ToDateTime(dgvPacientes.Rows[i].Cells[5].Value.ToString()),
                 Cedula = dgvPacientes.Rows[i].Cells[6].Value.ToString()
             };
-            FrmUpdatePaciente frmUpdatePaciente = new FrmUpdatePaciente();
-            frmUpdatePaciente.p = pm;
-            frmUpdatePaciente.pv = this;
-            frmUpdatePaciente.ShowDialog();
+
+            this.Hide();
+            Designs.PacientesViews.UpdatePaciente uppac = new UpdatePaciente();
+            uppac.p = pm;
+            uppac.pv = this;
+            uppac.Dock = DockStyle.Fill;
+            panelControl.Controls.Clear();
+            panelControl.Controls.Add(uppac);
+            
         }
 
         private void btnChange_Click(object sender, EventArgs e)
@@ -71,6 +85,18 @@ namespace HealtyALTF4.Designs.PacientesViews
             else
             {
                 MessageBox.Show("No se pudo cambiar el estado del paciente");
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dgvPacientes.DataSource = pc.Search(textBox1.Text);
+            }
+            catch
+            {
+                return;
             }
         }
     }

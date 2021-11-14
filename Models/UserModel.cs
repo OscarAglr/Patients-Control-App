@@ -10,6 +10,12 @@ namespace HealtyALTF4.Models
 {
     public class UserModel : IModel
     {
+        string nombre;
+        string rol;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Rol { get => rol; set => rol = value; }
+
         public void Create()
         {
             throw new NotImplementedException();
