@@ -1,11 +1,11 @@
 USE [master]
 GO
 
-/****** Object:  Database [Consultorio]    Script Date: 13/11/2021 18:23:12 ******/
+/****** Object:  Database [Consultorio]    Script Date: 15/11/2021 18:02:06 ******/
 DROP DATABASE [Consultorio]
 GO
 
-/****** Object:  Database [Consultorio]    Script Date: 13/11/2021 18:23:12 ******/
+/****** Object:  Database [Consultorio]    Script Date: 15/11/2021 18:02:06 ******/
 CREATE DATABASE [Consultorio]
  CONTAINMENT = NONE
  ON  PRIMARY 

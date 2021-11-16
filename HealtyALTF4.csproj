@@ -79,6 +79,18 @@
     <Compile Include="Designs\ConsultasViews\FrmAddConsulta.Designer.cs">
       <DependentUpon>FrmAddConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmAddDiagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmAddDiagnostico.Designer.cs">
+      <DependentUpon>FrmAddDiagnostico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmAddRecetaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmAddRecetaMedica.Designer.cs">
+      <DependentUpon>FrmAddRecetaMedica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Designs\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,15 +165,26 @@
     </Compile>
     <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\ConsultaModel.cs" />
+    <Compile Include="Models\DiagnosticoModel.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\MedicamentosModel.cs" />
     <Compile Include="Models\MedicosModel.cs" />
     <Compile Include="Models\PacientesModel.cs" />
+    <Compile Include="Models\RecetaMedicaModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Designs\ConsultasViews\ConsultasView.resx">
       <DependentUpon>ConsultasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\ConsultasViews\FrmAddConsulta.resx">
+      <DependentUpon>FrmAddConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\ConsultasViews\FrmAddDiagnostico.resx">
+      <DependentUpon>FrmAddDiagnostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\ConsultasViews\FrmAddRecetaMedica.resx">
+      <DependentUpon>FrmAddRecetaMedica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

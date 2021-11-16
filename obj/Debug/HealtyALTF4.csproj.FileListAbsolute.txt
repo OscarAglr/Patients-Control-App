@@ -172,3 +172,4 @@ C:\Users\jaguilar\Documents\Proyectos01\Patients-Control-Demo-main\Patients-Cont
 C:\Users\jaguilar\Documents\Proyectos01\Patients-Control-Demo-main\Patients-Control-Demo-main\obj\Debug\HealtyALTF4.csproj.CoreCompileInputs.cache
 C:\Users\jaguilar\Documents\Proyectos01\Patients-Control-Demo-main\Patients-Control-Demo-main\obj\Debug\HealtyALTF4.exe
 C:\Users\jaguilar\Documents\Proyectos01\Patients-Control-Demo-main\Patients-Control-Demo-main\obj\Debug\HealtyALTF4.pdb
+C:\Users\jaguilar\Documents\Proyectos01\Patients-Control-Demo-main\Patients-Control-Demo-main\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmAddConsulta.resources

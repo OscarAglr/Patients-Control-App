@@ -13,7 +13,15 @@ namespace HealtyALTF4.Controllers
         ConsultaModel model = new ConsultaModel();
         public bool Create(ConsultaModel c)
         {
-            throw new NotImplementedException();
+            try
+            {
+                c.Create();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public bool ChangeState(ConsultaModel c)

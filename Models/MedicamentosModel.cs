@@ -39,7 +39,7 @@ namespace HealtyALTF4.Models
             }
             catch (Exception ex)
             {
-                return;
+                throw ex;
             }
         }
 
