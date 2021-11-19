@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ConsultasController.cs" />
+    <Compile Include="Controllers\EnfermedadController.cs" />
     <Compile Include="Controllers\IControllers.cs" />
     <Compile Include="Controllers\MedicamentosControllers.cs" />
     <Compile Include="Controllers\MedicosController.cs" />
@@ -90,6 +91,24 @@
     </Compile>
     <Compile Include="Designs\ConsultasViews\FrmAddRecetaMedica.Designer.cs">
       <DependentUpon>FrmAddRecetaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmSelectEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmSelectEnfermedad.Designer.cs">
+      <DependentUpon>FrmSelectEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmSelectMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmSelectMedico.Designer.cs">
+      <DependentUpon>FrmSelectMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmSelectPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\ConsultasViews\FrmSelectPaciente.Designer.cs">
+      <DependentUpon>FrmSelectPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\Login.cs">
       <SubType>Form</SubType>
@@ -166,6 +185,7 @@
     <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\ConsultaModel.cs" />
     <Compile Include="Models\DiagnosticoModel.cs" />
+    <Compile Include="Models\EnfermedadModel.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\MedicamentosModel.cs" />
     <Compile Include="Models\MedicosModel.cs" />
@@ -185,6 +205,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\ConsultasViews\FrmAddRecetaMedica.resx">
       <DependentUpon>FrmAddRecetaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\ConsultasViews\FrmSelectEnfermedad.resx">
+      <DependentUpon>FrmSelectEnfermedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\ConsultasViews\FrmSelectMedico.resx">
+      <DependentUpon>FrmSelectMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\ConsultasViews\FrmSelectPaciente.resx">
+      <DependentUpon>FrmSelectPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

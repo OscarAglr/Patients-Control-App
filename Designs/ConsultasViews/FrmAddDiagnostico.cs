@@ -14,10 +14,22 @@ namespace HealtyALTF4.Designs.ConsultasViews
     public partial class FrmAddDiagnostico : Form
     {
         ConsultaModel consultaModel;
+        
         public FrmAddDiagnostico(ConsultaModel consultaModel)
         {
             InitializeComponent();
             this.consultaModel = consultaModel;
+        }
+
+        private void FrmAddDiagnostico_Load(object sender, EventArgs e)
+        {
+            txtNoPaciente.Text = consultaModel.Id_med.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmSelectEnfermedad frmSelectEnfermedad = new FrmSelectEnfermedad();
+            frmSelectEnfermedad.ShowDialog();
         }
     }
 }

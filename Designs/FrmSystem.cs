@@ -154,7 +154,7 @@ namespace HealtyALTF4.Designs
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            Designs.ConsultasViews.ConsultasView control = new ConsultasView();
+            Designs.ConsultasViews.ConsultasView control = new ConsultasView(this);
             control.Dock = DockStyle.Fill;
             panelControl.Controls.Clear();
             panelControl.Controls.Add(control);
