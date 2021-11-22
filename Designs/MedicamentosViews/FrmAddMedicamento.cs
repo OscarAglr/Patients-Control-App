@@ -51,5 +51,10 @@ namespace HealtyALTF4.Designs.MedicamentosViews
         {
             this.Close();
         }
+
+        private void FrmAddMedicamento_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

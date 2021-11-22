@@ -94,6 +94,7 @@ namespace HealtyALTF4.Designs.MedicosViews
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(414, 37);
             this.cbEspecialidad.TabIndex = 15;
+            this.cbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cbEspecialidad_SelectedIndexChanged);
             // 
             // label7
             // 

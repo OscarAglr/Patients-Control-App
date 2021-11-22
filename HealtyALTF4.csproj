@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ConsultasController.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\EnfermedadController.cs" />
+    <Compile Include="Controllers\EspecialidadController.cs" />
     <Compile Include="Controllers\IControllers.cs" />
     <Compile Include="Controllers\MedicamentosControllers.cs" />
     <Compile Include="Controllers\MedicosController.cs" />
@@ -109,6 +111,42 @@
     </Compile>
     <Compile Include="Designs\ConsultasViews\FrmSelectPaciente.Designer.cs">
       <DependentUpon>FrmSelectPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\EmpleadosViews\FrmAddEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\EmpleadosViews\FrmAddEmpleado.Designer.cs">
+      <DependentUpon>FrmAddEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\EmpleadosViews\UCEmpleadoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Designs\EmpleadosViews\UCEmpleadoView.Designer.cs">
+      <DependentUpon>UCEmpleadoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\EnfermedadesViews\EnfermedadesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Designs\EnfermedadesViews\EnfermedadesView.Designer.cs">
+      <DependentUpon>EnfermedadesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\EnfermedadesViews\FrmAddEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\EnfermedadesViews\FrmAddEnfermedad.Designer.cs">
+      <DependentUpon>FrmAddEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\EspecialidadViews\FrmAddEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\EspecialidadViews\FrmAddEspecialidad.Designer.cs">
+      <DependentUpon>FrmAddEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\EspecialidadViews\UCEspecialidadView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Designs\EspecialidadViews\UCEspecialidadView.Designer.cs">
+      <DependentUpon>UCEspecialidadView.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\Login.cs">
       <SubType>Form</SubType>
@@ -185,7 +223,9 @@
     <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\ConsultaModel.cs" />
     <Compile Include="Models\DiagnosticoModel.cs" />
+    <Compile Include="Models\EmpleadoModel.cs" />
     <Compile Include="Models\EnfermedadModel.cs" />
+    <Compile Include="Models\EspecialidadModel.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\MedicamentosModel.cs" />
     <Compile Include="Models\MedicosModel.cs" />
@@ -214,6 +254,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\ConsultasViews\FrmSelectPaciente.resx">
       <DependentUpon>FrmSelectPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\EmpleadosViews\FrmAddEmpleado.resx">
+      <DependentUpon>FrmAddEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\EmpleadosViews\UCEmpleadoView.resx">
+      <DependentUpon>UCEmpleadoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\EnfermedadesViews\EnfermedadesView.resx">
+      <DependentUpon>EnfermedadesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\EnfermedadesViews\FrmAddEnfermedad.resx">
+      <DependentUpon>FrmAddEnfermedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\EspecialidadViews\FrmAddEspecialidad.resx">
+      <DependentUpon>FrmAddEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\EspecialidadViews\UCEspecialidadView.resx">
+      <DependentUpon>UCEspecialidadView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -421,5 +479,6 @@
   <ItemGroup>
     <None Include="Resources\virus.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

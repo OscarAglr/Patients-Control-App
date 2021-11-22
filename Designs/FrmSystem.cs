@@ -174,5 +174,32 @@ namespace HealtyALTF4.Designs
                 txtWelcome.Text = txt.Substring(0, counter);
             }
         }
+
+        private void btnEnfermedades_Click(object sender, EventArgs e)
+        {
+            Designs.EnfermedadesViews.EnfermedadesView control = new EnfermedadesViews.EnfermedadesView();
+            control.Dock = DockStyle.Fill;
+            panelControl.Controls.Clear();
+            panelControl.Controls.Add(control);
+            HideMenu();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Designs.EmpleadosViews.UCEmpleadoView control = new EmpleadosViews.UCEmpleadoView();
+            control.Dock = DockStyle.Fill;
+            panelControl.Controls.Clear();
+            panelControl.Controls.Add(control);
+            HideMenu();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Designs.EspecialidadViews.UCEspecialidadView control = new EspecialidadViews.UCEspecialidadView();
+            control.Dock = DockStyle.Fill;
+            panelControl.Controls.Clear();
+            panelControl.Controls.Add(control);
+            HideMenu();
+        }
     }
 }

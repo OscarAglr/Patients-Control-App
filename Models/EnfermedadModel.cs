@@ -10,6 +10,12 @@ namespace HealtyALTF4.Models
 {
     public class EnfermedadModel : IModel
     {
+        string nombre;
+        string desc;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Desc { get => desc; set => desc = value; }
+
         public bool ChangeState()
         {
             throw new NotImplementedException();
@@ -17,21 +23,49 @@ namespace HealtyALTF4.Models
 
         public void Create()
         {
-            throw new NotImplementedException();
+            // exec AgregarEnfermedad @nombre, @desc
+            try
+            {
+                SqlConnection connect = new SqlConnection(Connection.cn);
+
+                connect.Open();
+
+                SqlCommand command = new SqlCommand("exec AgregarEnfermedad " +
+                    "@nombre, @desc", connect);
+
+                command.Parameters.Add("nombre", SqlDbType.VarChar, 100).Value = Nombre;
+                command.Parameters.Add("desc", SqlDbType.VarChar, 250).Value = Desc;
+
+                command.ExecuteNonQuery();
+
+                connect.Close();
+                return;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public DataTable ShowTables()
         {
-            DataTable dt = new DataTable("Mostrar Consultas");
-            SqlConnection connect = new SqlConnection(Connection.cn);
-            connect.Open();
-            SqlCommand command = new SqlCommand("Exec MostrarEnfermedades", connect);
+            try
+            {
+                DataTable dt = new DataTable("Mostrar Consultas");
+                SqlConnection connect = new SqlConnection(Connection.cn);
+                connect.Open();
+                SqlCommand command = new SqlCommand("Exec MostrarEnfermedades", connect);
 
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            adapter.Fill(dt);
-            connect.Close();
-            adapter.Dispose();
-            return dt;
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+                connect.Close();
+                adapter.Dispose();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public int Update()

@@ -201,3 +201,9 @@ C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\De
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmSelectPaciente.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmSelectMedico.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmSelectEnfermedad.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EnfermedadesViews.EnfermedadesView.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EnfermedadesViews.FrmAddEnfermedad.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EmpleadosViews.FrmAddEmpleado.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EmpleadosViews.UCEmpleadoView.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EspecialidadViews.FrmAddEspecialidad.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EspecialidadViews.UCEspecialidadView.resources

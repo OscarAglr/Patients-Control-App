@@ -18,7 +18,15 @@ namespace HealtyALTF4.Controllers
 
         public bool Create(EnfermedadModel t)
         {
-            throw new NotImplementedException();
+            try
+            {
+                t.Create();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public DataTable ShowTables()

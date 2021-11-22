@@ -84,5 +84,10 @@ namespace HealtyALTF4.Designs.MedicosViews
         {
             this.Hide();
         }
+
+        private void cbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

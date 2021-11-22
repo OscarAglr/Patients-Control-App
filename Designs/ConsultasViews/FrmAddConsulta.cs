@@ -61,7 +61,6 @@ namespace HealtyALTF4.Designs.ConsultasViews
             cm.Id_pac = int.Parse(txtNoPaciente.Text);
             cm.Id_med = int.Parse(txtNoMedico.Text);
             FrmAddDiagnostico fad = new FrmAddDiagnostico(cm);
-            fs.new
         }
     }
 }
