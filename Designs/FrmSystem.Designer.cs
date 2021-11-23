@@ -32,7 +32,6 @@ namespace HealtyALTF4.Designs
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSystem));
             this.subMenuCatalogo = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEnfermedades = new System.Windows.Forms.Button();
@@ -50,7 +49,7 @@ namespace HealtyALTF4.Designs
             this.btnReporte = new System.Windows.Forms.Button();
             this.subMenuOperaciones = new System.Windows.Forms.Panel();
             this.btnConsulta = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnCitas = new System.Windows.Forms.Button();
             this.btnOperaciones = new System.Windows.Forms.Button();
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -70,7 +69,6 @@ namespace HealtyALTF4.Designs
             // subMenuCatalogo
             // 
             this.subMenuCatalogo.BackColor = System.Drawing.Color.Black;
-            this.subMenuCatalogo.Controls.Add(this.button3);
             this.subMenuCatalogo.Controls.Add(this.button2);
             this.subMenuCatalogo.Controls.Add(this.button1);
             this.subMenuCatalogo.Controls.Add(this.btnEnfermedades);
@@ -81,26 +79,8 @@ namespace HealtyALTF4.Designs
             this.subMenuCatalogo.Location = new System.Drawing.Point(0, 94);
             this.subMenuCatalogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.subMenuCatalogo.Name = "subMenuCatalogo";
-            this.subMenuCatalogo.Size = new System.Drawing.Size(336, 483);
+            this.subMenuCatalogo.Size = new System.Drawing.Size(336, 409);
             this.subMenuCatalogo.TabIndex = 6;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::HealtyALTF4.Properties.Resources.disease;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 410);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(336, 67);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Alergias";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -246,7 +226,7 @@ namespace HealtyALTF4.Designs
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = global::HealtyALTF4.Properties.Resources.exit;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 1247);
+            this.button7.Location = new System.Drawing.Point(0, 1173);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(336, 75);
@@ -261,7 +241,7 @@ namespace HealtyALTF4.Designs
             this.subMenuSeguridad.Controls.Add(this.button5);
             this.subMenuSeguridad.Controls.Add(this.button6);
             this.subMenuSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuSeguridad.Location = new System.Drawing.Point(0, 1096);
+            this.subMenuSeguridad.Location = new System.Drawing.Point(0, 1022);
             this.subMenuSeguridad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.subMenuSeguridad.Name = "subMenuSeguridad";
             this.subMenuSeguridad.Size = new System.Drawing.Size(336, 151);
@@ -314,7 +294,7 @@ namespace HealtyALTF4.Designs
             this.btnSeguridad.ForeColor = System.Drawing.Color.Thistle;
             this.btnSeguridad.Image = global::HealtyALTF4.Properties.Resources.mascarilla_medica;
             this.btnSeguridad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeguridad.Location = new System.Drawing.Point(0, 1002);
+            this.btnSeguridad.Location = new System.Drawing.Point(0, 928);
             this.btnSeguridad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSeguridad.Name = "btnSeguridad";
             this.btnSeguridad.Size = new System.Drawing.Size(336, 94);
@@ -328,7 +308,7 @@ namespace HealtyALTF4.Designs
             this.subMenuReporte.BackColor = System.Drawing.Color.Black;
             this.subMenuReporte.Controls.Add(this.button10);
             this.subMenuReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.subMenuReporte.Location = new System.Drawing.Point(0, 925);
+            this.subMenuReporte.Location = new System.Drawing.Point(0, 851);
             this.subMenuReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.subMenuReporte.Name = "subMenuReporte";
             this.subMenuReporte.Size = new System.Drawing.Size(336, 77);
@@ -360,7 +340,7 @@ namespace HealtyALTF4.Designs
             this.btnReporte.ForeColor = System.Drawing.Color.Thistle;
             this.btnReporte.Image = global::HealtyALTF4.Properties.Resources.historial_medico__1_;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 831);
+            this.btnReporte.Location = new System.Drawing.Point(0, 757);
             this.btnReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(336, 94);
@@ -373,10 +353,10 @@ namespace HealtyALTF4.Designs
             // 
             this.subMenuOperaciones.BackColor = System.Drawing.Color.Black;
             this.subMenuOperaciones.Controls.Add(this.btnConsulta);
-            this.subMenuOperaciones.Controls.Add(this.button9);
+            this.subMenuOperaciones.Controls.Add(this.btnCitas);
             this.subMenuOperaciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.subMenuOperaciones.ForeColor = System.Drawing.Color.White;
-            this.subMenuOperaciones.Location = new System.Drawing.Point(0, 671);
+            this.subMenuOperaciones.Location = new System.Drawing.Point(0, 597);
             this.subMenuOperaciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.subMenuOperaciones.Name = "subMenuOperaciones";
             this.subMenuOperaciones.Size = new System.Drawing.Size(336, 160);
@@ -401,23 +381,23 @@ namespace HealtyALTF4.Designs
             this.btnConsulta.UseVisualStyleBackColor = false;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
-            // button9
+            // btnCitas
             // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = global::HealtyALTF4.Properties.Resources.cita;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(336, 80);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Recetas medicas";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnCitas.BackColor = System.Drawing.Color.Transparent;
+            this.btnCitas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCitas.FlatAppearance.BorderSize = 0;
+            this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCitas.ForeColor = System.Drawing.Color.White;
+            this.btnCitas.Image = global::HealtyALTF4.Properties.Resources.cita;
+            this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCitas.Location = new System.Drawing.Point(0, 0);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(336, 80);
+            this.btnCitas.TabIndex = 5;
+            this.btnCitas.Text = "Citas";
+            this.btnCitas.UseVisualStyleBackColor = false;
             // 
             // btnOperaciones
             // 
@@ -429,7 +409,7 @@ namespace HealtyALTF4.Designs
             this.btnOperaciones.ForeColor = System.Drawing.Color.Thistle;
             this.btnOperaciones.Image = global::HealtyALTF4.Properties.Resources.historial_medico;
             this.btnOperaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOperaciones.Location = new System.Drawing.Point(0, 577);
+            this.btnOperaciones.Location = new System.Drawing.Point(0, 503);
             this.btnOperaciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOperaciones.Name = "btnOperaciones";
             this.btnOperaciones.Size = new System.Drawing.Size(336, 94);
@@ -559,7 +539,7 @@ namespace HealtyALTF4.Designs
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Panel subMenuOperaciones;
         private System.Windows.Forms.Button btnConsulta;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnCitas;
         private System.Windows.Forms.Button btnOperaciones;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label txtWelcome;
@@ -567,7 +547,6 @@ namespace HealtyALTF4.Designs
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnEnfermedades;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     }

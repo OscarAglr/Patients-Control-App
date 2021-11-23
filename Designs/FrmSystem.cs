@@ -1,4 +1,6 @@
 ﻿using HealtyALTF4.Designs.ConsultasViews;
+using HealtyALTF4.Designs.EnfermedadesViews;
+using HealtyALTF4.Designs.EspecialidadViews;
 using HealtyALTF4.Designs.MedicamentosViews;
 using HealtyALTF4.Designs.MedicosViews;
 using HealtyALTF4.Designs.PacientesViews;
@@ -77,13 +79,10 @@ namespace HealtyALTF4.Designs
             HideMenu();
         }
 
+        // Boton medicos
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Designs.MedicosViews.MedicosView control = new MedicosView(this.panelControl);
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
-            HideMenu();
+            openChildForm(new FrmMedicoView());
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -97,11 +96,7 @@ namespace HealtyALTF4.Designs
 
         private void btnMedicamentos_Click_1(object sender, EventArgs e)
         {
-            Designs.MedicamentosViews.MedicamentoView control = new MedicamentoView();
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
-            HideMenu();
+            openChildForm(new FrmMedicamentosView());
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -177,11 +172,7 @@ namespace HealtyALTF4.Designs
 
         private void btnEnfermedades_Click(object sender, EventArgs e)
         {
-            Designs.EnfermedadesViews.EnfermedadesView control = new EnfermedadesViews.EnfermedadesView();
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
-            HideMenu();
+            openChildForm(new FrmEnfermedadesView());
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -195,11 +186,24 @@ namespace HealtyALTF4.Designs
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Designs.EspecialidadViews.UCEspecialidadView control = new EspecialidadViews.UCEspecialidadView();
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
-            HideMenu();
+            openChildForm(new FrmEspecialidadView());
+        }
+
+        private Form form = null;
+        private void openChildForm(Form childForm)
+        {
+            if (form != null)
+            {
+                form.Close();
+            }
+            form = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelControl.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

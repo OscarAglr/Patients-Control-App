@@ -136,17 +136,17 @@
     <Compile Include="Designs\EnfermedadesViews\FrmAddEnfermedad.Designer.cs">
       <DependentUpon>FrmAddEnfermedad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\EspecialidadViews\FrmAddEspecialidad.cs">
+    <Compile Include="Designs\EnfermedadesViews\FrmEnfermedadesView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Designs\EspecialidadViews\FrmAddEspecialidad.Designer.cs">
-      <DependentUpon>FrmAddEspecialidad.cs</DependentUpon>
+    <Compile Include="Designs\EnfermedadesViews\FrmEnfermedadesView.Designer.cs">
+      <DependentUpon>FrmEnfermedadesView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\EspecialidadViews\UCEspecialidadView.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Designs\EspecialidadViews\FrmEspecialidadView.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Designs\EspecialidadViews\UCEspecialidadView.Designer.cs">
-      <DependentUpon>UCEspecialidadView.cs</DependentUpon>
+    <Compile Include="Designs\EspecialidadViews\FrmEspecialidadView.Designer.cs">
+      <DependentUpon>FrmEspecialidadView.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\Login.cs">
       <SubType>Form</SubType>
@@ -160,41 +160,29 @@
     <Compile Include="Designs\FrmSystem.Designer.cs">
       <DependentUpon>FrmSystem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\MedicamentosViews\FrmAddMedicamento.cs">
+    <Compile Include="Designs\MedicamentosViews\FrmMedicamentosView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Designs\MedicamentosViews\FrmAddMedicamento.Designer.cs">
-      <DependentUpon>FrmAddMedicamento.cs</DependentUpon>
+    <Compile Include="Designs\MedicamentosViews\FrmMedicamentosView.Designer.cs">
+      <DependentUpon>FrmMedicamentosView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\MedicamentosViews\FrmUpdateMedicamento.cs">
+    <Compile Include="Designs\MedicosViews\FrmBuscarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Designs\MedicamentosViews\FrmUpdateMedicamento.Designer.cs">
-      <DependentUpon>FrmUpdateMedicamento.cs</DependentUpon>
+    <Compile Include="Designs\MedicosViews\FrmBuscarEmpleado.Designer.cs">
+      <DependentUpon>FrmBuscarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\MedicamentosViews\MedicamentoView.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Designs\MedicosViews\FrmBuscarEspecialidad.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Designs\MedicamentosViews\MedicamentoView.Designer.cs">
-      <DependentUpon>MedicamentoView.cs</DependentUpon>
+    <Compile Include="Designs\MedicosViews\FrmBuscarEspecialidad.Designer.cs">
+      <DependentUpon>FrmBuscarEspecialidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\MedicosViews\UpdateMedico.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Designs\MedicosViews\FrmMedicoView.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Designs\MedicosViews\UpdateMedico.Designer.cs">
-      <DependentUpon>UpdateMedico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Designs\MedicosViews\AddMedico.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Designs\MedicosViews\AddMedico.Designer.cs">
-      <DependentUpon>AddMedico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Designs\MedicosViews\MedicosView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Designs\MedicosViews\MedicosView.Designer.cs">
-      <DependentUpon>MedicosView.cs</DependentUpon>
+    <Compile Include="Designs\MedicosViews\FrmMedicoView.Designer.cs">
+      <DependentUpon>FrmMedicoView.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\PacientesViews\UpdatePaciente .cs">
       <SubType>UserControl</SubType>
@@ -267,11 +255,11 @@
     <EmbeddedResource Include="Designs\EnfermedadesViews\FrmAddEnfermedad.resx">
       <DependentUpon>FrmAddEnfermedad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\EspecialidadViews\FrmAddEspecialidad.resx">
-      <DependentUpon>FrmAddEspecialidad.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\EnfermedadesViews\FrmEnfermedadesView.resx">
+      <DependentUpon>FrmEnfermedadesView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\EspecialidadViews\UCEspecialidadView.resx">
-      <DependentUpon>UCEspecialidadView.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\EspecialidadViews\FrmEspecialidadView.resx">
+      <DependentUpon>FrmEspecialidadView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -279,23 +267,17 @@
     <EmbeddedResource Include="Designs\FrmSystem.resx">
       <DependentUpon>FrmSystem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicamentosViews\FrmAddMedicamento.resx">
-      <DependentUpon>FrmAddMedicamento.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\MedicamentosViews\FrmMedicamentosView.resx">
+      <DependentUpon>FrmMedicamentosView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicamentosViews\FrmUpdateMedicamento.resx">
-      <DependentUpon>FrmUpdateMedicamento.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\MedicosViews\FrmBuscarEmpleado.resx">
+      <DependentUpon>FrmBuscarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicamentosViews\MedicamentoView.resx">
-      <DependentUpon>MedicamentoView.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\MedicosViews\FrmBuscarEspecialidad.resx">
+      <DependentUpon>FrmBuscarEspecialidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicosViews\UpdateMedico.resx">
-      <DependentUpon>UpdateMedico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicosViews\AddMedico.resx">
-      <DependentUpon>AddMedico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Designs\MedicosViews\MedicosView.resx">
-      <DependentUpon>MedicosView.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\MedicosViews\FrmMedicoView.resx">
+      <DependentUpon>FrmMedicoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\PacientesViews\UpdatePaciente .resx">
       <DependentUpon>UpdatePaciente .cs</DependentUpon>
@@ -479,6 +461,8 @@
   <ItemGroup>
     <None Include="Resources\virus.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Designs\CitasViews\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

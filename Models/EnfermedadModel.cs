@@ -10,11 +10,13 @@ namespace HealtyALTF4.Models
 {
     public class EnfermedadModel : IModel
     {
+        int id;
         string nombre;
         string desc;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Desc { get => desc; set => desc = value; }
+        public int Id { get => id; set => id = value; }
 
         public bool ChangeState()
         {
@@ -70,7 +72,27 @@ namespace HealtyALTF4.Models
 
         public int Update()
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlConnection connect = new SqlConnection(Connection.cn);
+
+                connect.Open();
+
+                SqlCommand command = new SqlCommand("exec ActualizarEnfermedad @id, @nombre, @desc", connect);
+
+                command.Parameters.Add("id", SqlDbType.Int).Value = Id;
+                command.Parameters.Add("nombre", SqlDbType.VarChar, 100).Value = Nombre;
+                command.Parameters.Add("desc", SqlDbType.VarChar, 250).Value = Desc;
+
+                command.ExecuteNonQuery();
+
+                connect.Close();
+                return Id;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
         }
     }
 }
