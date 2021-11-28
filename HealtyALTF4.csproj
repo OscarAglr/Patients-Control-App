@@ -118,23 +118,17 @@
     <Compile Include="Designs\EmpleadosViews\FrmAddEmpleado.Designer.cs">
       <DependentUpon>FrmAddEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Designs\EmpleadosViews\FrmEmpleadoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\EmpleadosViews\FrmEmpleadoView.Designer.cs">
+      <DependentUpon>FrmEmpleadoView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Designs\EmpleadosViews\UCEmpleadoView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Designs\EmpleadosViews\UCEmpleadoView.Designer.cs">
       <DependentUpon>UCEmpleadoView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Designs\EnfermedadesViews\EnfermedadesView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Designs\EnfermedadesViews\EnfermedadesView.Designer.cs">
-      <DependentUpon>EnfermedadesView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Designs\EnfermedadesViews\FrmAddEnfermedad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Designs\EnfermedadesViews\FrmAddEnfermedad.Designer.cs">
-      <DependentUpon>FrmAddEnfermedad.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\EnfermedadesViews\FrmEnfermedadesView.cs">
       <SubType>Form</SubType>
@@ -184,23 +178,11 @@
     <Compile Include="Designs\MedicosViews\FrmMedicoView.Designer.cs">
       <DependentUpon>FrmMedicoView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\PacientesViews\UpdatePaciente .cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Designs\PacientesViews\FrmPacienteView.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Designs\PacientesViews\UpdatePaciente .Designer.cs">
-      <DependentUpon>UpdatePaciente .cs</DependentUpon>
-    </Compile>
-    <Compile Include="Designs\PacientesViews\AddPaciente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Designs\PacientesViews\AddPaciente.Designer.cs">
-      <DependentUpon>AddPaciente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Designs\PacientesViews\PacienteView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Designs\PacientesViews\PacienteView.Designer.cs">
-      <DependentUpon>PacienteView.cs</DependentUpon>
+    <Compile Include="Designs\PacientesViews\FrmPacienteView.Designer.cs">
+      <DependentUpon>FrmPacienteView.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\UsersViews\UserView.cs">
       <SubType>UserControl</SubType>
@@ -246,14 +228,11 @@
     <EmbeddedResource Include="Designs\EmpleadosViews\FrmAddEmpleado.resx">
       <DependentUpon>FrmAddEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Designs\EmpleadosViews\FrmEmpleadoView.resx">
+      <DependentUpon>FrmEmpleadoView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Designs\EmpleadosViews\UCEmpleadoView.resx">
       <DependentUpon>UCEmpleadoView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Designs\EnfermedadesViews\EnfermedadesView.resx">
-      <DependentUpon>EnfermedadesView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Designs\EnfermedadesViews\FrmAddEnfermedad.resx">
-      <DependentUpon>FrmAddEnfermedad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\EnfermedadesViews\FrmEnfermedadesView.resx">
       <DependentUpon>FrmEnfermedadesView.cs</DependentUpon>
@@ -279,14 +258,8 @@
     <EmbeddedResource Include="Designs\MedicosViews\FrmMedicoView.resx">
       <DependentUpon>FrmMedicoView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\PacientesViews\UpdatePaciente .resx">
-      <DependentUpon>UpdatePaciente .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Designs\PacientesViews\AddPaciente.resx">
-      <DependentUpon>AddPaciente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Designs\PacientesViews\PacienteView.resx">
-      <DependentUpon>PacienteView.cs</DependentUpon>
+    <EmbeddedResource Include="Designs\PacientesViews\FrmPacienteView.resx">
+      <DependentUpon>FrmPacienteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\UsersViews\UserView.resx">
       <DependentUpon>UserView.cs</DependentUpon>

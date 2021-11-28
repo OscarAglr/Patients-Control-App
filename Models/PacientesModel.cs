@@ -17,6 +17,9 @@ namespace HealtyALTF4.Models
         string segundo_apellido;
         DateTime fecha_nac;
         string cedula;
+        int altura;
+        int peso;
+        string tiposangre;
 
         public string Primer_nombre { get => primer_nombre; set => primer_nombre = value; }
         public string Segundo_nombre { get => segundo_nombre; set => segundo_nombre = value; }
@@ -25,6 +28,9 @@ namespace HealtyALTF4.Models
         public DateTime Fecha_nac { get => fecha_nac; set => fecha_nac = value; }
         public string Cedula { get => cedula; set => cedula = value; }
         public int Id { get => id; set => id = value; }
+        public int Altura { get => altura; set => altura = value; }
+        public int Peso { get => peso; set => peso = value; }
+        public string Tiposangre { get => tiposangre; set => tiposangre = value; }
 
         public void Create()
         {
@@ -35,7 +41,7 @@ namespace HealtyALTF4.Models
                 connect.Open();
 
                 SqlCommand command = new SqlCommand("exec AgregarPaciente " +
-                    "@p_nom, @s_nom, @p_ape, @s_ape, @f_nac, @cedula", connect);
+                    "@p_nom, @s_nom, @p_ape, @s_ape, @f_nac, @cedula, @altura, @peso, @tipo", connect);
 
                 command.Parameters.Add("p_nom", SqlDbType.VarChar, 50).Value = Primer_nombre;
                 command.Parameters.Add("s_nom", SqlDbType.VarChar, 50).Value = Segundo_nombre;
@@ -43,6 +49,9 @@ namespace HealtyALTF4.Models
                 command.Parameters.Add("s_ape", SqlDbType.VarChar, 50).Value = Segundo_apellido;
                 command.Parameters.Add("f_nac", SqlDbType.Date).Value = Fecha_nac;
                 command.Parameters.Add("cedula", SqlDbType.VarChar, 50).Value = Cedula;
+                command.Parameters.Add("altura", SqlDbType.Int).Value = Altura;
+                command.Parameters.Add("peso", SqlDbType.Int).Value = Peso;
+                command.Parameters.Add("tipo", SqlDbType.VarChar, 15).Value = Tiposangre;
 
                 command.ExecuteNonQuery();
 
@@ -85,7 +94,7 @@ namespace HealtyALTF4.Models
                 connect.Open();
 
                 SqlCommand command = new SqlCommand("exec ActualizarPaciente " +
-                    "@id, @p_nom, @s_nom, @p_ape, @s_ape, @f_nac, @cedula", connect);
+                    "@id, @p_nom, @s_nom, @p_ape, @s_ape, @f_nac, @cedula, @altura, @peso, @tipo", connect);
 
                 command.Parameters.Add("id", SqlDbType.Int).Value = Id;
                 command.Parameters.Add("p_nom", SqlDbType.VarChar, 50).Value = Primer_nombre;
@@ -94,6 +103,9 @@ namespace HealtyALTF4.Models
                 command.Parameters.Add("s_ape", SqlDbType.VarChar, 50).Value = Segundo_apellido;
                 command.Parameters.Add("f_nac", SqlDbType.Date).Value = Fecha_nac;
                 command.Parameters.Add("cedula", SqlDbType.VarChar, 50).Value = Cedula;
+                command.Parameters.Add("altura", SqlDbType.Int).Value = Altura;
+                command.Parameters.Add("peso", SqlDbType.Int).Value = Peso;
+                command.Parameters.Add("tipo", SqlDbType.VarChar, 15).Value = Tiposangre;
 
                 command.ExecuteNonQuery();
 

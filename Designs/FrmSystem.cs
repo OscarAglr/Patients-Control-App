@@ -1,4 +1,5 @@
 ﻿using HealtyALTF4.Designs.ConsultasViews;
+using HealtyALTF4.Designs.EmpleadosViews;
 using HealtyALTF4.Designs.EnfermedadesViews;
 using HealtyALTF4.Designs.EspecialidadViews;
 using HealtyALTF4.Designs.MedicamentosViews;
@@ -72,10 +73,7 @@ namespace HealtyALTF4.Designs
 
         private void btnPacientes_Click_1(object sender, EventArgs e)
         {
-            Designs.PacientesViews.PacienteView control = new PacienteView(this.panelControl);
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
+            openChildForm(new FrmPacienteView());
             HideMenu();
         }
 
@@ -177,10 +175,7 @@ namespace HealtyALTF4.Designs
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Designs.EmpleadosViews.UCEmpleadoView control = new EmpleadosViews.UCEmpleadoView();
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
+            openChildForm(new FrmEmpleadoView());
             HideMenu();
         }
 

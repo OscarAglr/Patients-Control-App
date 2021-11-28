@@ -37,7 +37,7 @@ namespace HealtyALTF4.Controllers
 
         public int Update(EmpleadoModel t)
         {
-            throw new NotImplementedException();
+            return t.Update();
         }
     }
 }

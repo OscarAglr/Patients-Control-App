@@ -34,9 +34,7 @@ namespace HealtyALTF4.Designs.EnfermedadesViews
             btnAdd.Enabled = false;
             btnUpdate.Enabled = false;
             btnSave.Enabled = true;
-            tbName.Text = "";
-            rtbDesc.Text = "";
-            tbIDEsp.Text = "";
+            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -98,6 +96,9 @@ namespace HealtyALTF4.Designs.EnfermedadesViews
                     btnAdd.Enabled = true;
                     btnUpdate.Enabled = true;
                     MostrarTablas();
+                    tbName.Text = "";
+                    rtbDesc.Text = "";
+                    tbIDEsp.Text = "";
                 }
                 else
                 {
