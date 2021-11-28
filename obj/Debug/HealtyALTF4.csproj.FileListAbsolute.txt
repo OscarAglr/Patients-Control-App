@@ -192,8 +192,6 @@ C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\De
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmSelectPaciente.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmSelectMedico.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.ConsultasViews.FrmSelectEnfermedad.resources
-C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EmpleadosViews.FrmAddEmpleado.resources
-C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EmpleadosViews.UCEmpleadoView.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.MedicosViews.FrmMedicoView.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.MedicosViews.FrmBuscarEmpleado.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.MedicosViews.FrmBuscarEspecialidad.resources
@@ -202,3 +200,6 @@ C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\De
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EnfermedadesViews.FrmEnfermedadesView.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.PacientesViews.FrmPacienteView.resources
 C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.EmpleadosViews.FrmEmpleadoView.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.CitasViews.FrmBuscarMedicoCita.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.CitasViews.FrmBuscarPacienteCita.resources
+C:\Users\jaguilar\Documents\Proyectos01\ProyectoBDI\Patients-Control-Demo\obj\Debug\HealtyALTF4.Designs.CitasViews.FrmCitaView.resources

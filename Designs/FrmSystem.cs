@@ -1,4 +1,5 @@
-﻿using HealtyALTF4.Designs.ConsultasViews;
+﻿using HealtyALTF4.Designs.CitasViews;
+using HealtyALTF4.Designs.ConsultasViews;
 using HealtyALTF4.Designs.EmpleadosViews;
 using HealtyALTF4.Designs.EnfermedadesViews;
 using HealtyALTF4.Designs.EspecialidadViews;
@@ -199,6 +200,11 @@ namespace HealtyALTF4.Designs
             this.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void btnCitas_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmCitaView());
         }
     }
 }

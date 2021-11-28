@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CitaController.cs" />
     <Compile Include="Controllers\ConsultasController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\EnfermedadController.cs" />
@@ -70,6 +71,24 @@
     <Compile Include="Controllers\MedicosController.cs" />
     <Compile Include="Controllers\PacientesController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Designs\CitasViews\FrmBuscarMedicoCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\CitasViews\FrmBuscarMedicoCita.Designer.cs">
+      <DependentUpon>FrmBuscarMedicoCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\CitasViews\FrmBuscarPacienteCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\CitasViews\FrmBuscarPacienteCita.Designer.cs">
+      <DependentUpon>FrmBuscarPacienteCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\CitasViews\FrmCitaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\CitasViews\FrmCitaView.Designer.cs">
+      <DependentUpon>FrmCitaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Designs\ConsultasViews\ConsultasView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,23 +131,11 @@
     <Compile Include="Designs\ConsultasViews\FrmSelectPaciente.Designer.cs">
       <DependentUpon>FrmSelectPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designs\EmpleadosViews\FrmAddEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Designs\EmpleadosViews\FrmAddEmpleado.Designer.cs">
-      <DependentUpon>FrmAddEmpleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Designs\EmpleadosViews\FrmEmpleadoView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Designs\EmpleadosViews\FrmEmpleadoView.Designer.cs">
       <DependentUpon>FrmEmpleadoView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Designs\EmpleadosViews\UCEmpleadoView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Designs\EmpleadosViews\UCEmpleadoView.Designer.cs">
-      <DependentUpon>UCEmpleadoView.cs</DependentUpon>
     </Compile>
     <Compile Include="Designs\EnfermedadesViews\FrmEnfermedadesView.cs">
       <SubType>Form</SubType>
@@ -190,6 +197,7 @@
     <Compile Include="Designs\UsersViews\UserView.Designer.cs">
       <DependentUpon>UserView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CitaModel.cs" />
     <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\ConsultaModel.cs" />
     <Compile Include="Models\DiagnosticoModel.cs" />
@@ -204,6 +212,15 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Designs\CitasViews\FrmBuscarMedicoCita.resx">
+      <DependentUpon>FrmBuscarMedicoCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\CitasViews\FrmBuscarPacienteCita.resx">
+      <DependentUpon>FrmBuscarPacienteCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\CitasViews\FrmCitaView.resx">
+      <DependentUpon>FrmCitaView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Designs\ConsultasViews\ConsultasView.resx">
       <DependentUpon>ConsultasView.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,14 +242,8 @@
     <EmbeddedResource Include="Designs\ConsultasViews\FrmSelectPaciente.resx">
       <DependentUpon>FrmSelectPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designs\EmpleadosViews\FrmAddEmpleado.resx">
-      <DependentUpon>FrmAddEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Designs\EmpleadosViews\FrmEmpleadoView.resx">
       <DependentUpon>FrmEmpleadoView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Designs\EmpleadosViews\UCEmpleadoView.resx">
-      <DependentUpon>UCEmpleadoView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Designs\EnfermedadesViews\FrmEnfermedadesView.resx">
       <DependentUpon>FrmEnfermedadesView.cs</DependentUpon>
@@ -434,8 +445,6 @@
   <ItemGroup>
     <None Include="Resources\virus.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Designs\CitasViews\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

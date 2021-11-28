@@ -398,6 +398,7 @@ namespace HealtyALTF4.Designs
             this.btnCitas.TabIndex = 5;
             this.btnCitas.Text = "Citas";
             this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
             // btnOperaciones
             // 
