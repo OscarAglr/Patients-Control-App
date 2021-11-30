@@ -10,18 +10,18 @@ namespace HealtyALTF4.Models
     public class RecetaMedicaModel
     {
         int id_med;
-        int id_consulta;
+        int id_diag;
         int cantidad;
         int dosis;
         string descripcion;
 
-        public int Id_med { get => id_med; set => id_med = value; }
-        public int Id_consulta { get => id_consulta; set => id_consulta = value; }
         public int Cantidad { get => cantidad; set => cantidad = value; }
         public int Dosis { get => dosis; set => dosis = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
+        public int Id_med { get => id_med; set => id_med = value; }
+        public int Id_diag { get => id_diag; set => id_diag = value; }
 
-        public bool Create()
+        public void Create()
         {
             try
             {
@@ -30,10 +30,10 @@ namespace HealtyALTF4.Models
                 connect.Open();
 
                 SqlCommand command = new SqlCommand("exec AgregarMedicamentosConsultas " +
-                    "@id_med, @id_cons, @cantidad, @dosis, @desc", connect);
+                    "@id_med, @id_diag, @cantidad, @dosis, @desc", connect);
 
                 command.Parameters.Add("id_med", System.Data.SqlDbType.Int).Value = Id_med;
-                command.Parameters.Add("id_cons", System.Data.SqlDbType.Int).Value = Id_consulta;
+                command.Parameters.Add("id_diag", System.Data.SqlDbType.Int).Value = Id_diag;
                 command.Parameters.Add("cantidad", System.Data.SqlDbType.Int).Value = Cantidad;
                 command.Parameters.Add("dosis", System.Data.SqlDbType.Int).Value = Dosis;
                 command.Parameters.Add("desc", System.Data.SqlDbType.VarChar, 100).Value = Descripcion;
@@ -41,11 +41,11 @@ namespace HealtyALTF4.Models
                 command.ExecuteNonQuery();
 
                 connect.Close();
-                return true;
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                Console.WriteLine(ex.Message);
+                throw ex;
             }
         }
     }

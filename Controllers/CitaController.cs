@@ -10,6 +10,7 @@ namespace HealtyALTF4.Controllers
 {
     public class CitaController : IControllers<CitaModel>
     {
+        CitaModel model = new CitaModel();
         public bool ChangeState(CitaModel t)
         {
             throw new NotImplementedException();
@@ -30,7 +31,7 @@ namespace HealtyALTF4.Controllers
 
         public DataTable ShowTables()
         {
-            throw new NotImplementedException();
+            return model.ShowTables();
         }
 
         public int Update(CitaModel t)

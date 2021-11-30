@@ -59,7 +59,24 @@ namespace HealtyALTF4.Models
 
         public DataTable ShowTables()
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlConnection connect = new SqlConnection(Connection.cn);
+                connect.Open();
+                SqlCommand command = new SqlCommand("Exec MostrarCitas", connect);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+                connect.Close();
+                adapter.Dispose();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw ex;
+            }
         }
 
         public int Update()

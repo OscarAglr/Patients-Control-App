@@ -84,15 +84,6 @@ namespace HealtyALTF4.Designs
             openChildForm(new FrmMedicoView());
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            Designs.ConsultasViews.ConsultasView control = new Designs.ConsultasViews.ConsultasView();
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
-            HideMenu();
-        }
-
         private void btnMedicamentos_Click_1(object sender, EventArgs e)
         {
             openChildForm(new FrmMedicamentosView());
@@ -148,10 +139,7 @@ namespace HealtyALTF4.Designs
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            Designs.ConsultasViews.ConsultasView control = new ConsultasView(this);
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
+            openChildForm(new FrmConsultaView());
             HideMenu();
         }
 
