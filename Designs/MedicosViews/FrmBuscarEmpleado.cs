@@ -36,6 +36,11 @@ namespace HealtyALTF4.Designs.MedicosViews
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 int index = dataGridView1.CurrentCell.RowIndex;
+                if (dataGridView1.Rows[index].Cells[8].Value.ToString() == "Deshabilitado")
+                {
+                    MessageBox.Show("No se puede elegir a este empleado porque su estado es deshabilitado");
+                    return;
+                }
                 view.txtNEmp.Text = dataGridView1.Rows[index].Cells[0].Value.ToString();
                 view.txtNombreEmp.Text = dataGridView1.Rows[index].Cells[1].Value.ToString() + " " + dataGridView1.Rows[index].Cells[2].Value.ToString() + " " 
                     + dataGridView1.Rows[index].Cells[3].Value.ToString() + " " + dataGridView1.Rows[index].Cells[4].Value.ToString();
@@ -43,6 +48,11 @@ namespace HealtyALTF4.Designs.MedicosViews
                 this.Close();
             }
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = control.Search(textBox1.Text);
         }
     }
 }

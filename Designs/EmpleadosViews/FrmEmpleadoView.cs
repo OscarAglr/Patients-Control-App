@@ -14,10 +14,12 @@ namespace HealtyALTF4.Designs.EmpleadosViews
 {
     public partial class FrmEmpleadoView : Form
     {
+        UserModel u;
         EmpleadosController control = new EmpleadosController();
-        public FrmEmpleadoView()
+        public FrmEmpleadoView(UserModel u)
         {
             InitializeComponent();
+            this.u = u;
         }
 
         private void FrmEmpleadoView_Load(object sender, EventArgs e)
@@ -25,7 +27,19 @@ namespace HealtyALTF4.Designs.EmpleadosViews
             cbPuesto.Items.Add("Administrador");
             cbPuesto.Items.Add("Médico");
             cbPuesto.Items.Add("Enfermera");
+            cbPuesto.Items.Add("Farmaceutico");
+            cbPuesto.Items.Add("Gerente");
+            cbPuesto.Items.Add("Secretaria");
+            cbPuesto.Items.Add("Otros");
             MostrarTablas();
+            dtFNac.MaxDate = DateTime.Now;
+            if (u.Rol != "Gerente")
+            {
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnChangeState.Enabled = false;
+                btnCancel.Enabled = false;
+            }
         }
 
         private void MostrarTablas()
@@ -44,6 +58,17 @@ namespace HealtyALTF4.Designs.EmpleadosViews
         {
             try
             {
+                if (string.IsNullOrEmpty(txtPNom.Text) || string.IsNullOrEmpty(txtPApe.Text) || string.IsNullOrEmpty(txtCedula.Text))
+                {
+                    MessageBox.Show("Falta rellenar algunos datos");
+                    return;
+                }
+                CValidacionCedula validar = new CValidacionCedula();
+                if (validar.Validar(txtCedula.Text) != true)
+                {
+                    MessageBox.Show("La cedula no es valida");
+                    return;
+                }
                 EmpleadoModel model = new EmpleadoModel
                 {
                     Primer_nombre = txtPNom.Text,
@@ -110,6 +135,17 @@ namespace HealtyALTF4.Designs.EmpleadosViews
         {
             try
             {
+                if (string.IsNullOrEmpty(txtPNom.Text) || string.IsNullOrEmpty(txtPApe.Text) || string.IsNullOrEmpty(txtCedula.Text))
+                {
+                    MessageBox.Show("Falta rellenar algunos datos");
+                    return;
+                }
+                CValidacionCedula validar = new CValidacionCedula();
+                if (validar.Validar(txtCedula.Text) != true)
+                {
+                    MessageBox.Show("La cedula no es valida");
+                    return;
+                }
                 EmpleadoModel model = new EmpleadoModel
                 {
                     Id = int.Parse(txtID.Text),
@@ -138,6 +174,21 @@ namespace HealtyALTF4.Designs.EmpleadosViews
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dgvEmpleados.DataSource = control.Search(textBox1.Text);
         }
     }
 }

@@ -15,14 +15,22 @@ namespace HealtyALTF4.Designs.MedicamentosViews
     public partial class FrmMedicamentosView : Form
     {
         MedicamentosControllers control = new MedicamentosControllers();
-        public FrmMedicamentosView()
+        UserModel u;
+        public FrmMedicamentosView(UserModel u)
         {
             InitializeComponent();
+            this.u = u;
         }
 
         private void FrmMedicamentosView_Load(object sender, EventArgs e)
         {
             MostrarTablas();
+            if (u.Rol != "Farmaceutico")
+            {
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnCS.Enabled = false;
+            }
         }
 
         public void MostrarTablas()
@@ -44,6 +52,11 @@ namespace HealtyALTF4.Designs.MedicamentosViews
         {
             try
             {
+                if (string.IsNullOrEmpty(tbName.Text))
+                {
+                    MessageBox.Show("El nombre del medicamento no puede ir vacío");
+                    return;
+                }
                 MedicamentosModel model = new MedicamentosModel
                 {
                     Nombre = tbName.Text,
@@ -86,6 +99,11 @@ namespace HealtyALTF4.Designs.MedicamentosViews
         {
             try
             {
+                if (string.IsNullOrEmpty(tbName.Text))
+                {
+                    MessageBox.Show("El nombre del medicamento no puede ir vacío");
+                    return;
+                }
                 MedicamentosModel model = new MedicamentosModel
                 {
                     Id = int.Parse(tbNMed.Text),
@@ -103,6 +121,44 @@ namespace HealtyALTF4.Designs.MedicamentosViews
                 else
                 {
                     MessageBox.Show("No se pudo modificar el registro");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            dgvMedicamentos.DataSource = control.Search(tbSearch.Text);
+        }
+
+        private void btnCS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvMedicamentos.SelectedRows.Count > 0)
+                {
+                    int index = dgvMedicamentos.CurrentCell.RowIndex;
+                    index = int.Parse(dgvMedicamentos.Rows[index].Cells[0].Value.ToString());
+                    MedicamentosModel model = new MedicamentosModel
+                    {
+                        Id = index
+                    };
+                    if (MessageBox.Show("¿Está seguro de querer cambiar el estado del medicamento con id " + model.Id.ToString() + "?",
+                        "Confirmar cambio de estado", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        if (control.ChangeState(model))
+                        {
+                            MessageBox.Show("Medicamento actualizado con éxito");
+                            MostrarTablas();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo actualizar al medico");
+                        }
+                    }
                 }
             }
             catch (Exception ex)

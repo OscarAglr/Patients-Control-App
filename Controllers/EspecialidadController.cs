@@ -10,6 +10,7 @@ namespace HealtyALTF4.Controllers
 {
     public class EspecialidadController : IControllers<EspecialidadModel>
     {
+        EspecialidadModel model = new EspecialidadModel();
         public bool ChangeState(EspecialidadModel t)
         {
             throw new NotImplementedException();
@@ -30,13 +31,17 @@ namespace HealtyALTF4.Controllers
 
         public DataTable ShowTables()
         {
-            EspecialidadModel model = new EspecialidadModel();
             return model.ShowTables();
         }
 
         public int Update(EspecialidadModel t)
         {
             return t.Update();
+        }
+
+        public DataTable Search(string dato)
+        {
+            return model.Search(dato);
         }
     }
 }

@@ -38,5 +38,10 @@ namespace HealtyALTF4.Controllers
         {
             return t.Update();
         }
+
+        public DataTable Search(string dato)
+        {
+            return model.Search(dato);
+        }
     }
 }

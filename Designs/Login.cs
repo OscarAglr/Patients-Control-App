@@ -23,8 +23,9 @@ namespace HealtyALTF4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataTable dato;
+            DataTable dato, rol;
             dato = UserController.Validar_acceso(this.txtUser.Text, this.txtPassword.Text);
+            UserController control = new UserController();
             if (dato == null)
             {
                 MessageBox.Show("No se pudo conectar al Servidor", "Sistema de Control de Hospital", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -38,7 +39,10 @@ namespace HealtyALTF4
                 {
                     UserModel user = new UserModel();
                     user.Nombre = txtUser.Text;
-                    MessageBox.Show("Bienvenido al Sistema", "Sistema de Control de Hospital", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    rol = UserController.GetRol(user);
+                    user.Id = control.GetIDUser(user.Nombre);
+                    user.Rol = rol.Rows[0][0].ToString();
+                    MessageBox.Show("Bienvenido al Sistema " + user.Id, "Sistema de Control de Hospital", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmSystem system = new FrmSystem(this, user);
                     system.Show();
                     this.Hide();
@@ -88,6 +92,11 @@ namespace HealtyALTF4
             {
                 timer1.Stop();
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

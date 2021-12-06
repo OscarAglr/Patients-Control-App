@@ -29,7 +29,7 @@ namespace HealtyALTF4.Models
 
                 connect.Open();
 
-                SqlCommand command = new SqlCommand("exec AgregarMedicamentosConsultas " +
+                SqlCommand command = new SqlCommand("exec AgregarMedicamentosDiagnosticos " +
                     "@id_med, @id_diag, @cantidad, @dosis, @desc", connect);
 
                 command.Parameters.Add("id_med", System.Data.SqlDbType.Int).Value = Id_med;

@@ -83,5 +83,83 @@ namespace HealtyALTF4.Models
         {
             throw new NotImplementedException();
         }
+
+        public void CambiarEstado()
+        {
+            try
+            {
+                SqlConnection connect = new SqlConnection(Connection.cn);
+
+                connect.Open();
+
+                SqlCommand command = new SqlCommand("exec CambiarEstadoCita " +
+                    "@id", connect);
+
+                command.Parameters.Add("id", System.Data.SqlDbType.Int).Value = Id;
+
+                command.ExecuteNonQuery();
+                connect.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
+
+        public DataTable Citita()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlConnection connect = new SqlConnection(Connection.cn);
+                connect.Open();
+                SqlCommand command = new SqlCommand("Exec AllCitas", connect);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+                connect.Close();
+                adapter.Dispose();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
+
+        public bool Reservado()
+        {
+            try
+            {
+                DataTable DtResultado = new DataTable();
+                SqlConnection connect = new SqlConnection(Connection.cn);
+                connect.Open();
+                SqlCommand command = new SqlCommand("Exec DisponibilidadMedico @fecha, @hora, @id", connect);
+                command.Parameters.AddWithValue("@fecha", Fecha);
+                command.Parameters.AddWithValue("@hora", Hora);
+                command.Parameters.AddWithValue("@id", n_med);
+
+                SqlDataAdapter sda = new SqlDataAdapter(command);
+
+                sda.Fill(DtResultado);
+                connect.Close();
+                sda.Dispose();
+                if (DtResultado.Rows[0][0].ToString() == "Reservado")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return true;
+            }
+        }
     }
 }

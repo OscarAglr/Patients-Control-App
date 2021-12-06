@@ -42,5 +42,10 @@ namespace HealtyALTF4.Designs.MedicosViews
                 this.Close();
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = control.Search(textBox1.Text);
+        }
     }
 }

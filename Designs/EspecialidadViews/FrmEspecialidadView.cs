@@ -14,15 +14,23 @@ namespace HealtyALTF4.Designs.EspecialidadViews
 {
     public partial class FrmEspecialidadView : Form
     {
+        UserModel u;
         EspecialidadController control = new EspecialidadController();
-        public FrmEspecialidadView()
+        public FrmEspecialidadView(UserModel u)
         {
             InitializeComponent();
+            this.u = u;
         }
 
         private void FrmEspecialidadView_Load(object sender, EventArgs e)
         {
+
             MostrarTablas();
+            if (u.Rol != "Registrador")
+            {
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = false;
+            }
         }
 
         public void MostrarTablas()
@@ -44,6 +52,11 @@ namespace HealtyALTF4.Designs.EspecialidadViews
         {
             try
             {
+                if (string.IsNullOrEmpty(tbName.Text))
+                {
+                    MessageBox.Show("El nombre de la especialidad no puede ir vacía");
+                    return;
+                }
                 EspecialidadModel model = new EspecialidadModel
                 {
                     Nombre = tbName.Text,
@@ -86,6 +99,11 @@ namespace HealtyALTF4.Designs.EspecialidadViews
         {
             try
             {
+                if (string.IsNullOrEmpty(tbName.Text))
+                {
+                    MessageBox.Show("El nombre de la especialidad no puede ir vacía");
+                    return;
+                }
                 EspecialidadModel model = new EspecialidadModel
                 {
                     Id = int.Parse(tbIDEsp.Text),
@@ -109,6 +127,11 @@ namespace HealtyALTF4.Designs.EspecialidadViews
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            dgvEspecialidad.DataSource = control.Search(tbSearch.Text);
         }
     }
 }

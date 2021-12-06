@@ -113,5 +113,27 @@ namespace HealtyALTF4.Models
                 return -1;
             }
         }
+
+        public DataTable Search(string dato)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlConnection connect = new SqlConnection(Connection.cn);
+                connect.Open();
+                SqlCommand command = new SqlCommand("Exec BusquedaEmpleados @dato", connect);
+                command.Parameters.AddWithValue("@dato", dato);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+                connect.Close();
+                adapter.Dispose();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
     }
 }

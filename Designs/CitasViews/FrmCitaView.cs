@@ -18,6 +18,8 @@ namespace HealtyALTF4.Designs.CitasViews
         public FrmCitaView()
         {
             InitializeComponent();
+            dtFecha.MinDate = DateTime.Now;
+            dtHora.MinDate = dtFecha.Value.Date;
         }
 
         private void btnSearchPaciente_Click(object sender, EventArgs e)
@@ -44,6 +46,11 @@ namespace HealtyALTF4.Designs.CitasViews
                     Hora = dtHora.Value.TimeOfDay,
                     Motivo = rtbMotivos.Text
                 };
+                if (control.Reservado(model))
+                {
+                    MessageBox.Show("El medico con id " + model.N_med + " ya tiene una cita para esa fecha y hora");
+                    return;
+                }
                 if (control.Create(model))
                 {
                     MessageBox.Show("Los datos de la cita han sido guardados");
@@ -57,6 +64,16 @@ namespace HealtyALTF4.Designs.CitasViews
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FrmCitaView_Load(object sender, EventArgs e)
+        {
+            dgvCitita.DataSource = control.Citita();
+        }
+
+        private void dtFecha_ValueChanged(object sender, EventArgs e)
+        {
+            dtHora.MinDate = dtFecha.Value.Date;
         }
     }
 }

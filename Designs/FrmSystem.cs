@@ -1,4 +1,5 @@
-﻿using HealtyALTF4.Designs.CitasViews;
+﻿using HealtyALTF4.Controllers;
+using HealtyALTF4.Designs.CitasViews;
 using HealtyALTF4.Designs.ConsultasViews;
 using HealtyALTF4.Designs.EmpleadosViews;
 using HealtyALTF4.Designs.EnfermedadesViews;
@@ -6,6 +7,7 @@ using HealtyALTF4.Designs.EspecialidadViews;
 using HealtyALTF4.Designs.MedicamentosViews;
 using HealtyALTF4.Designs.MedicosViews;
 using HealtyALTF4.Designs.PacientesViews;
+using HealtyALTF4.Designs.UsersViews;
 using HealtyALTF4.Models;
 using System;
 using System.Collections.Generic;
@@ -34,6 +36,7 @@ namespace HealtyALTF4.Designs
             MenuDesing();
             this.login = login;
             this.user = user;
+
         }
 
         //Con este método oculto los paneles no los borren UnU
@@ -74,27 +77,24 @@ namespace HealtyALTF4.Designs
 
         private void btnPacientes_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new FrmPacienteView());
+            openChildForm(new FrmPacienteView(user, this));
             HideMenu();
         }
 
         // Boton medicos
         private void button2_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new FrmMedicoView());
+            openChildForm(new FrmMedicoView(user, this));
         }
 
         private void btnMedicamentos_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new FrmMedicamentosView());
+            openChildForm(new FrmMedicamentosView(user));
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            Designs.UsersViews.UserView control = new UsersViews.UserView();
-            control.Dock = DockStyle.Fill;
-            panelControl.Controls.Clear();
-            panelControl.Controls.Add(control);
+            openChildForm(new FrmUsersView());
             HideMenu();
         }
 
@@ -130,6 +130,103 @@ namespace HealtyALTF4.Designs
             {
                 txtWelcome.Text = "Bienvenido, " + user.Nombre;
             }
+            if (user.Rol == "Administrador")
+            {
+                // boton usuario
+                btnPacientes.Enabled = true;
+                btnDoctores.Enabled = true;
+                btnMedicamentos.Enabled = true;
+                btnEnfermedades.Enabled = true;
+                button1.Enabled = true;
+                button2.Enabled = true;
+                btnCitas.Enabled = false;
+                btnConsulta.Enabled = false;
+                button10.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                button5.Enabled = true;
+            } 
+            else if (user.Rol == "Secretaria")
+            {
+                btnPacientes.Enabled = true;
+                btnDoctores.Enabled = false;
+                btnMedicamentos.Enabled = false;
+                btnEnfermedades.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                btnCitas.Enabled = true;
+                btnConsulta.Enabled = false;
+                button10.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                // boton usuario
+                button5.Enabled = false;
+            }
+            else if (user.Rol == "Medico")
+            {
+                btnPacientes.Enabled = true;
+                btnDoctores.Enabled = false;
+                btnMedicamentos.Enabled = true;
+                btnEnfermedades.Enabled = true;
+                button1.Enabled = false;
+                button2.Enabled = true;
+                btnCitas.Enabled = false;
+                btnConsulta.Enabled = true;
+                button10.Enabled = true;
+                button3.Enabled = false;
+                button4.Enabled = true;
+                // boton usuario
+                button5.Enabled = false;
+                user.Id_med = new UserController().GetIDMedico(user.Nombre);
+            }
+            else if (user.Rol == "Gerente")
+            {
+                btnPacientes.Enabled = false;
+                btnDoctores.Enabled = true;
+                btnMedicamentos.Enabled = false;
+                btnEnfermedades.Enabled = false;
+                button1.Enabled = true;
+                button2.Enabled = false;
+                btnCitas.Enabled = false;
+                btnConsulta.Enabled = false;
+                button10.Enabled = false;
+                button3.Enabled = true;
+                button4.Enabled = false;
+                // boton usuario
+                button5.Enabled = false;
+            }
+            else if (user.Rol == "Farmaceutico")
+            {
+                btnPacientes.Enabled = false;
+                btnDoctores.Enabled = false;
+                btnMedicamentos.Enabled = true;
+                btnEnfermedades.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                btnCitas.Enabled = false;
+                btnConsulta.Enabled = false;
+                button10.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                // boton usuario
+                button5.Enabled = false;
+            }
+            else if (user.Rol == "Farmaceutico")
+            {
+                btnPacientes.Enabled = false;
+                btnDoctores.Enabled = false;
+                btnMedicamentos.Enabled = true;
+                btnEnfermedades.Enabled = true;
+                button1.Enabled = false;
+                button2.Enabled = true;
+                btnCitas.Enabled = false;
+                btnConsulta.Enabled = false;
+                button10.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                // boton usuario
+                button5.Enabled = false;
+            }
             // Animación
             txt = txtWelcome.Text;
             len = txt.Length;
@@ -139,7 +236,7 @@ namespace HealtyALTF4.Designs
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            openChildForm(new FrmConsultaView());
+            openChildForm(new FrmConsultaView(this, user));
             HideMenu();
         }
 
@@ -159,22 +256,22 @@ namespace HealtyALTF4.Designs
 
         private void btnEnfermedades_Click(object sender, EventArgs e)
         {
-            openChildForm(new FrmEnfermedadesView());
+            openChildForm(new FrmEnfermedadesView(user));
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new FrmEmpleadoView());
+            openChildForm(new FrmEmpleadoView(user));
             HideMenu();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new FrmEspecialidadView());
+            openChildForm(new FrmEspecialidadView(user));
         }
 
-        private Form form = null;
-        private void openChildForm(Form childForm)
+        public Form form = null;
+        public void openChildForm(Form childForm)
         {
             if (form != null)
             {
@@ -193,6 +290,26 @@ namespace HealtyALTF4.Designs
         private void btnCitas_Click(object sender, EventArgs e)
         {
             openChildForm(new FrmCitaView());
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Reports.FrmReportePaciente());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Reports.FrmReporteMedico());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Reports.FrmReporT());
+        }
+
+        private void btnCS_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmChangePassword(user));
         }
     }
 }

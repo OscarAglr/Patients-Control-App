@@ -13,7 +13,16 @@ namespace HealtyALTF4.Controllers
         CitaModel model = new CitaModel();
         public bool ChangeState(CitaModel t)
         {
-            throw new NotImplementedException();
+            try
+            {
+                t.CambiarEstado();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
 
         public bool Create(CitaModel t)
@@ -37,6 +46,16 @@ namespace HealtyALTF4.Controllers
         public int Update(CitaModel t)
         {
             throw new NotImplementedException();
+        }
+
+        public DataTable Citita()
+        {
+            return model.Citita();
+        }
+
+        public bool Reservado(CitaModel t)
+        {
+            return t.Reservado();
         }
     }
 }

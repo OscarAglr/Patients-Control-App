@@ -38,6 +38,11 @@ namespace HealtyALTF4.Designs.CitasViews
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
                     int index = dataGridView1.CurrentCell.RowIndex;
+                    if (dataGridView1.Rows[index].Cells[5].Value.ToString() == "Deshabilitado")
+                    {
+                        MessageBox.Show("No se puede elegir a este medico porque su estado está deshabilitado");
+                        return;
+                    }
                     view.txtIDM.Text = dataGridView1.Rows[index].Cells[0].Value.ToString();
                     view.txtNameM.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
                     MessageBox.Show("Se selecciono al médico con éxito");
@@ -48,6 +53,11 @@ namespace HealtyALTF4.Designs.CitasViews
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = control.Search(textBox1.Text);
         }
     }
 }

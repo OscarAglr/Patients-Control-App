@@ -9,15 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HealtyALTF4.Reports;
 
 namespace HealtyALTF4.Designs.PacientesViews
 {
     public partial class FrmPacienteView : Form
     {
         PacientesController control = new PacientesController();
-        public FrmPacienteView()
+        UserModel u;
+        FrmSystem fs;
+        public FrmPacienteView(UserModel u, FrmSystem fs)
         {
             InitializeComponent();
+            this.u = u;
+            this.fs = fs;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -31,8 +36,24 @@ namespace HealtyALTF4.Designs.PacientesViews
         {
             try
             {
+                if (string.IsNullOrEmpty(txtPNom.Text) || string.IsNullOrEmpty(txtPApe.Text)) 
+                {
+                    MessageBox.Show("Los datos del primer nombre y del primer apellido no pueden estar vacíos");
+                    return;
+                }
+                CValidacionCedula validar = new CValidacionCedula();
+                // Si el campo de cédula está vacío se toma como la persona no tiene cédula
+                if (txtCedula.Text != "")
+                {
+                    if (validar.Validar(txtCedula.Text) != true)
+                    {
+                        MessageBox.Show("La cedula no es valida");
+                        return;
+                    }
+                }
                 PacientesModel model = new PacientesModel
                 {
+                    
                     Primer_nombre = txtPNom.Text,
                     Segundo_nombre = txtSNom.Text,
                     Primer_apellido = txtPApe.Text,
@@ -64,6 +85,17 @@ namespace HealtyALTF4.Designs.PacientesViews
 
         private void FrmPacienteView_Load(object sender, EventArgs e)
         {
+            if (u.Rol != "Secretaria")
+            {
+                btnAdd.Enabled = false;
+                btnChangeState.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnCancel.Enabled = false;
+            }
+            if (u.Rol != "Medico")
+            {
+                btnReporte.Enabled = false;
+            }
             cbTipoSangre.Items.Add("A+");
             cbTipoSangre.Items.Add("A-");
             cbTipoSangre.Items.Add("B+");
@@ -86,6 +118,7 @@ namespace HealtyALTF4.Designs.PacientesViews
         {
             try
             {
+                
                 if (dgvPacientes.SelectedRows.Count > 0)
                 {
                     int index = dgvPacientes.CurrentCell.RowIndex;
@@ -129,6 +162,20 @@ namespace HealtyALTF4.Designs.PacientesViews
         {
             try
             {
+                if (string.IsNullOrEmpty(txtPNom.Text) || string.IsNullOrEmpty(txtPApe.Text))
+                {
+                    MessageBox.Show("Los datos del primer nombre y del primer apellido no pueden estar vacíos");
+                    return;
+                }
+                CValidacionCedula validar = new CValidacionCedula();
+                if (txtCedula.Text != "")
+                {
+                    if (validar.Validar(txtCedula.Text) != true)
+                    {
+                        MessageBox.Show("La cedula no es valida");
+                        return;
+                    }
+                }
                 PacientesModel model = new PacientesModel
                 {
                     Id = int.Parse(txtID.Text),
@@ -195,6 +242,38 @@ namespace HealtyALTF4.Designs.PacientesViews
                         }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dgvPacientes.DataSource = control.Search(textBox1.Text);
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmReportePaciente frmReportePaciente = new FrmReportePaciente();
+                int i = dgvPacientes.CurrentCell.RowIndex;
+                string idpac = dgvPacientes.Rows[i].Cells[0].Value.ToString();
+                frmReportePaciente.textBox1.Text = idpac;
+                fs.openChildForm(frmReportePaciente);
+                this.Close();
             }
             catch (Exception ex)
             {
